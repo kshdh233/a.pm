@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import './SearchBar.css';
+import '../styles/SearchBar.css';
 
 const SearchBar = (props)=>{
     const products = props.searchItems;

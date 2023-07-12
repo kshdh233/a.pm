@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 import Pagination from '@mui/material/Pagination';
-import './Popular_play.css';
+import '../styles/Popular_play.css';
 
 export default function PerformanceList() {
   const [performances, setPerformances] = useState([]);
