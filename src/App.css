@@ -3,15 +3,22 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 350px;
   pointer-events: none;
+  animation : shake 3s;
+  animation-iteration-count: infinite;
+ 
+}
+@keyframes shake{
+ 0%{rotate:0deg;}
+ 25%{rotate:90deg;}
+ 50%{rotate:-90deg;}
+ 75%{rotate:90deg;}
+ 100%{rotate:-90deg;}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
+
 
 .App-header {
   background-color: #282c34;
@@ -29,10 +36,5 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ 
 }

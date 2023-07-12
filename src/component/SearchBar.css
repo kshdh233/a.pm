@@ -1,0 +1,17 @@
+.searchBar{
+    padding: 10px;
+    margin : 10px;
+    display : flex;
+    justify-content : center;
+}
+
+.searchBar ul li{
+    text-align : left;
+    text-decoration: none;
+}
+
+.textcss{
+    width: 300px;
+
+
+}
