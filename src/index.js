@@ -15,6 +15,7 @@ import Schedule_page from "./page/Schedule_page.js";
 import SignIn_page from "./page/SignIn_page.js";
 import SignUp_page from "./page/SignUp_page.js";
 import Semi_login_page from "./page/Semi_login_page.js";
+import Play_information_page from "./page/Play_information_page.js";
 
 // component 폴더
 import All_play from "./component/All_play.js";
@@ -39,6 +40,7 @@ root.render(
       <Route path={process.env.PUBLIC_URL +"/SignIn_page"} element={<SignIn_page/>}/>
       <Route path={process.env.PUBLIC_URL +"/SignUp_page"} element={<SignUp_page/>}/>
       <Route path={process.env.PUBLIC_URL +"/Semi_login_page"} element={<Semi_login_page/>}/>
+      <Route path={process.env.PUBLIC_URL +"/Play_information_page"} element={<Play_information_page/>}/>
     </Routes>
   </BrowserRouter>
   
