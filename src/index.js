@@ -12,6 +12,9 @@ import { Route, Routes, BrowserRouter} from "react-router-dom";
 import Main_page from "./page/Main_page.js";
 import My_page from "./page/My_page.js";
 import Schedule_page from "./page/Schedule_page.js";
+import SignIn_page from "./page/SignIn_page.js";
+import SignUp_page from "./page/SignUp_page.js";
+import Semi_login_page from "./page/Semi_login_page.js";
 
 // component 폴더
 import All_play from "./component/All_play.js";
@@ -33,8 +36,9 @@ root.render(
       <Route path={process.env.PUBLIC_URL +"/Popular_play"} element={<Popular_playList/>}/>
       <Route path={process.env.PUBLIC_URL +"/My_page"} element={<My_page/>}/>
       <Route path={process.env.PUBLIC_URL +"/Schedule_page"} element={<Schedule_page/>}/>
-      
-      
+      <Route path={process.env.PUBLIC_URL +"/SignIn_page"} element={<SignIn_page/>}/>
+      <Route path={process.env.PUBLIC_URL +"/SignUp_page"} element={<SignUp_page/>}/>
+      <Route path={process.env.PUBLIC_URL +"/Semi_login_page"} element={<Semi_login_page/>}/>
     </Routes>
   </BrowserRouter>
   
