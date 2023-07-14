@@ -1,0 +1,29 @@
+.semi_login {
+  background-color: #ffffff;
+  padding: 15px;
+  border: 0.01px solid #ccc9c9;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 100px;
+}
+
+.semi_login a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.semi_regist {
+  vertical-align: text-bottom;
+}
+
+.semi_regist a{
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.m a{
+  color: rgb(104, 106, 107);
+}
