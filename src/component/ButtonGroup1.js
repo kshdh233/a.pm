@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
-import "../styles/ButtonGroup1.css"
+import styles from "../styles/ButtonGroup1.module.css"; // Assuming you have a CSS module file
 
 function ButtonGroupComponent() {
   return (
