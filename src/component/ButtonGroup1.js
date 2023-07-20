@@ -6,11 +6,10 @@ import "../styles/ButtonGroup1.css"
 function ButtonGroupComponent() {
   return (
     <ButtonGroup variant="outlined" aria-label="outlined button group">
-      <Button>Performance information</Button>
-      <Button>Schedule</Button>
-      <Button>Event</Button>
-      <Button>Avenue information</Button>
-      <Button>Review benefit</Button>
+      <Button>공연 정보</Button>
+      <Button>스케줄</Button>
+      <Button>이벤트 및 재관람 혜택</Button>
+      <Button>공연장 정보</Button>
     </ButtonGroup>
   );
 }
