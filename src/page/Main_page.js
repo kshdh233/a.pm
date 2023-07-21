@@ -10,7 +10,7 @@ function Main_page() {
     <SearchBar/>
     <div>인기 공연</div> 
     <div>전체 공연</div>
-    <FixedBottomNavigation/>
+    
     </>
   );
 }

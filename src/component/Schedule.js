@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 function Schedule(){
   return(
     <div className='box-area'>
-    <a href="/schedule">일정 관리 {'>'}</a>
+    <Link to="/Schedule_page">일정 관리 {'>'}</Link>
     </div>
   )
 };

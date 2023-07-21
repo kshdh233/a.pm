@@ -8,7 +8,7 @@ function SignIn_page() {
     <div>
     <Header />
     <Signin />
-    <FixedBottomNavigation/>    
+        
     </div>
   );
 }

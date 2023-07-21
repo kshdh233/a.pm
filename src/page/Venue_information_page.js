@@ -10,7 +10,7 @@ function Venue_information_page() {
     <hr className={styles.separator} />
     <ButtonGroupComponent />
     <div>주요 공연장</div>
-    <FixedBottomNavigation/>
+    
     </div>
   );
 }

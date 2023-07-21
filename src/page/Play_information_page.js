@@ -12,11 +12,7 @@ function Play_information_page() {
       <SearchBar />
       <div style={{ padding: '8px', background: '#ffffff' }}>
         {/* Reduced size of the ButtonGroupComponent and added spacing between buttons */}
-        <ButtonGroupComponent fontSize="12px">
-          <Button sx={{ fontSize: '1px', mr: 1 }}>Button 1</Button>
-          <Button sx={{ fontSize: '1px', mr: 1 }}>Button 2</Button>
-          <Button sx={{ fontSize: '1px' }}>Button 3</Button>
-        </ButtonGroupComponent>
+        <ButtonGroupComponent fontSize="12px"></ButtonGroupComponent>
       </div>
 
       {/* Main Content */}

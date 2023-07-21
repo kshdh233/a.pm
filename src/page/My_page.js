@@ -13,7 +13,7 @@ function My_page(){
         <Header />
         <Login_ragist />
         <Schedule />
-        <FixedBottomNavigation/>
+        
         </div>
     )
 }

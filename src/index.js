@@ -6,7 +6,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
 
-import { Route, Routes, BrowserRouter} from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 // page 폴더
 import Main_page from "./page/Main_page.js";
@@ -27,29 +27,35 @@ import Popular_play from "./component/Popular_play.js";
 import SearchBar from "./component/SearchBar.js";
 import PaginationSize from './component/PaginationSize';
 import Popular_playList from './component/Popular_play.js';
+import FixedBottomNavigation from './component/Nav.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
- 
+
   <BrowserRouter>
     <Routes>
-      <Route path={process.env.PUBLIC_URL +"/"} element={<App />}/>
-      <Route path={process.env.PUBLIC_URL +"/Main_page"} element={<Main_page />}/>
-      <Route path={process.env.PUBLIC_URL +"/SearchBar"} element={<SearchBar />}/>
-      <Route path={process.env.PUBLIC_URL +"/Pagination"} element={<PaginationSize/>}/>
-      <Route path={process.env.PUBLIC_URL +"/Popular_play"} element={<Popular_playList/>}/>
-      <Route path={process.env.PUBLIC_URL +"/My_page"} element={<My_page/>}/>
-      <Route path={process.env.PUBLIC_URL +"/Schedule_page"} element={<Schedule_page/>}/>
-      <Route path={process.env.PUBLIC_URL +"/SignIn_page"} element={<SignIn_page/>}/>
-      <Route path={process.env.PUBLIC_URL +"/SignUp_page"} element={<SignUp_page/>}/>
-      <Route path={process.env.PUBLIC_URL +"/Semi_login_page"} element={<Semi_login_page/>}/>
-      <Route path={process.env.PUBLIC_URL +"/Play_information_page"} element={<Play_information_page/>}/>
-      <Route path={process.env.PUBLIC_URL +"/Actor_schedule_page"} element={<Actor_schedule_page/>}/>
-      <Route path={process.env.PUBLIC_URL +"/Event_page"} element={<Event_page/>}/>
-      <Route path={process.env.PUBLIC_URL +"/Venue_information_page"} element={<Venue_information_page/>}/>
+      <Route element={<FixedBottomNavigation />}>
+        <Route path={"/"} element={<App />} />
+        <Route path={"/Main_page"} element={<Main_page />} />
+        {/* <Route path={"/SearchBar"} element={<SearchBar />} /> */}
+        {/* <Route path={"/Pagination"} element={<PaginationSize />} /> */}
+        <Route path={"/Popular_play"} element={<Popular_playList />} />
+        <Route path={"/My_page"} element={<My_page />} />
+
+        <Route path={"/Schedule_page"} element={<Schedule_page />} />
+        <Route path={"/Play_information_page"} element={<Play_information_page />} />
+        <Route path={"/Actor_schedule_page"} element={<Actor_schedule_page />} />
+        <Route path={"/Event_page"} element={<Event_page />} />
+        <Route path={"/Venue_information_page"} element={<Venue_information_page />} />
+      </Route>
+      <Route element={<></>}>
+        <Route path={"/SignIn_page"} element={<SignIn_page />} />
+        <Route path={"/SignUp_page"} element={<SignUp_page />} />
+        <Route path={"/Semi_login_page"} element={<Semi_login_page />} />
+      </Route>
     </Routes>
   </BrowserRouter>
-  
+
 );
 
 

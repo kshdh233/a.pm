@@ -11,7 +11,7 @@ function Event_page() {
     <ButtonGroupComponent />
     <div>공연 관련 이벤트</div>
     <div>재관람 혜택</div>
-    <FixedBottomNavigation/>
+    
     </div>
   );
 }

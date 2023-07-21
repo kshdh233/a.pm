@@ -9,7 +9,7 @@ function Actor_schedule_page() {
     <SearchBar/>
     <hr className={styles.separator} />
     <ButtonGroupComponent />
-    <FixedBottomNavigation/>
+    
     </div>
   );
 }

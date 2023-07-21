@@ -8,7 +8,7 @@ function SignUp_page() {
     <div>
     <Header />
     <Signup />
-    <FixedBottomNavigation/>    
+        
     </div>
   );
 }
