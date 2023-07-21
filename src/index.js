@@ -48,15 +48,10 @@ root.render(
         <Route path={"/Event_page"} element={<Event_page />} />
         <Route path={"/Venue_information_page"} element={<Venue_information_page />} />
       </Route>
-      <Route element={<></>}>
         <Route path={"/SignIn_page"} element={<SignIn_page />} />
         <Route path={"/SignUp_page"} element={<SignUp_page />} />
         <Route path={"/Semi_login_page"} element={<Semi_login_page />} />
-      </Route>
     </Routes>
   </BrowserRouter>
 
 );
-
-
-
