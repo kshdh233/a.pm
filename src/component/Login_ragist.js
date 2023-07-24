@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 function Login_ragist(){
   return(
     <div className='box-area'>
-    <a href="/Login">로그인 및 회원가입하기 {'>'}</a>
+    <Link to="/Semi_login_page">로그인 및 회원가입하기 {'>'}</Link>
     </div>
   )
 };

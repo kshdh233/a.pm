@@ -1,17 +1,25 @@
 import SearchBar from "../component/SearchBar";
 import ButtonGroupComponent from "../component/ButtonGroup1";
 import FixedBottomNavigation from "../component/Nav";
-import styles from "../styles/PlayInformationPage.module.css";
 
 function Event_page() {
   return (
-    <div>
-    <SearchBar/>
-    <hr className={styles.separator} />
-    <ButtonGroupComponent />
-    <div>공연 관련 이벤트</div>
-    <div>재관람 혜택</div>
-    
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      {/* Header */}
+      <SearchBar />
+      <div style={{ padding: '8px', background: '#ffffff' }}>
+        {/* Reduced size of the ButtonGroupComponent and added spacing between buttons */}
+        <ButtonGroupComponent fontSize="12px"></ButtonGroupComponent>
+      </div>
+
+      {/* Main Content */}
+      <div style={{ flex: 1 }}>
+        <div>공연 관련 이벤트</div> 
+        <div>재관람 혜택</div>
+      </div>
+
+      {/* Footer */}
+      <FixedBottomNavigation />
     </div>
   );
 }
