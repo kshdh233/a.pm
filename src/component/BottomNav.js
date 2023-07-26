@@ -8,14 +8,26 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import Paper from '@mui/material/Paper';
 import { Home, PersonOutline, Place, TheaterComedy } from '@mui/icons-material';
+import { useNavigate } from 'react-router';
+import { Outlet } from 'react-router-dom';
 
 
 function FixedBottomNavigation() {
   const [value, setValue] = React.useState(0);
   const ref = React.useRef(null);
+  const navigate = useNavigate();
 
+  // label, icon, url
+  const navInfo = [
+    ['공연장 정보', <Place />, '/ConcertHall_page'],
+    ['공연 정보', <TheaterComedy />, '/Play_information_page'],
+    ['', <Home />, '/Main_page'],
+    ['찜', <FavoriteIcon />, '/'],
+    ['마이페이지', <PersonOutline />, '/My_page'],
+  ]
   return (
-
+    <>
+    <Outlet/>
     <Box sx={{ pb: 7 }} ref={ref}>
       <CssBaseline />
      
@@ -24,23 +36,17 @@ function FixedBottomNavigation() {
           showLabels
           value={value}
           onChange={(event, newValue) => {
-            setValue(newValue);
+            navigate(navInfo[newValue][2]);
+              setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="공연장 정보" icon={<Place />} href='ConcertHall_page'/>
-
-          <BottomNavigationAction label="공연 정보" icon={<TheaterComedy />} />
-
-          <BottomNavigationAction label="" icon={<Home />} href='Main_page'/>
-
-          <BottomNavigationAction label="찜" icon={<FavoriteIcon />} />
-
-        
-          <BottomNavigationAction label="마이페이지" icon={<PersonOutline />} href='My_page'/>
+          {navInfo.map((nav, idx) => <BottomNavigationAction key={idx} label={nav[0]} icon={nav[1]} />
+            )}
 
         </BottomNavigation>
       </Paper>
     </Box>
+    </>
   );
 }
 

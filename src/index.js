@@ -16,7 +16,7 @@ import ConcertHall_page from './page/ConcertHall_page';
 
 // component 폴더
 import All_play from "./component/All_play.js";
-import Nav from "./component/BottomNav";
+import FixedBottomNavigation from "./component/BottomNav";
 import PerformanceList from "./component/Popular_play.js";
 import SearchBar from "./component/SearchBar.js";
 import PaginationSize from './component/PaginationSize';
@@ -34,6 +34,8 @@ root.render(
       <Route path={process.env.PUBLIC_URL +"/SearchBar"} element={<SearchBar />}/>
       <Route path={process.env.PUBLIC_URL +"/Pagination"} element={<PaginationSize/>}/>
       <Route path={process.env.PUBLIC_URL +"/Popular_play"} element={<PerformanceList/>}/>
+      <Route path={process.env.PUBLIC_URL +"/BottomNav"} element={<FixedBottomNavigation/>}/>
+
       {/* 페이지 경로 */}
       <Route path={process.env.PUBLIC_URL +"/Main_page"} element={<Main_page />}/>
       <Route path={process.env.PUBLIC_URL +"/ConcertHall_page"} element={<ConcertHall_page/>}/>
