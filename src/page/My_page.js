@@ -1,6 +1,6 @@
 import React from 'react';
 import FixedBottomNavigation from "../component/BottomNav";
-import Login from "../component/Login";
+import Login_ragist from "../component/Login_ragist";
 import Header from "../component/Header";
 import Schedule from "../component/Schedule";
 import '../styles/Login.css';
@@ -11,9 +11,9 @@ function My_page(){
     return(
         <div>
         <Header />
-        <Login />
+        <Login_ragist />
         <Schedule />
-        <FixedBottomNavigation/>
+        
         </div>
     )
 }

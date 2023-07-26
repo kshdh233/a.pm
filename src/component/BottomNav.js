@@ -11,12 +11,10 @@ import { Home, PersonOutline, Place, TheaterComedy } from '@mui/icons-material';
 import { useNavigate } from 'react-router';
 import { Outlet } from 'react-router-dom';
 
-
 function FixedBottomNavigation() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(4);
   const ref = React.useRef(null);
   const navigate = useNavigate();
-
   // label, icon, url
   const navInfo = [
     ['공연장 정보', <Place />, '/ConcertHall_page'],
@@ -27,25 +25,25 @@ function FixedBottomNavigation() {
   ]
   return (
     <>
-    <Outlet/>
-    <Box sx={{ pb: 7 }} ref={ref}>
-      <CssBaseline />
-     
-      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={5}>
-        <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
-            navigate(navInfo[newValue][2]);
-              setValue(newValue);
-          }}
-        >
-          {navInfo.map((nav, idx) => <BottomNavigationAction key={idx} label={nav[0]} icon={nav[1]} />
-            )}
+      <Outlet />
+      <Box sx={{ pb: 7 }}>
+        <CssBaseline />
 
-        </BottomNavigation>
-      </Paper>
-    </Box>
+        {/* Apply "position: fixed" style to the container */}
+        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={5}>
+          <BottomNavigation
+            showLabels
+            value={value}
+            onChange={(event, newValue) => {
+              navigate(navInfo[newValue][2]);
+              setValue(newValue);
+            }}
+          >
+            {navInfo.map((nav, idx) => <BottomNavigationAction key={idx} label={nav[0]} icon={nav[1]} />
+            )}
+          </BottomNavigation>
+        </Paper>
+      </Box>
     </>
   );
 }

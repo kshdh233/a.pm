@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-function Schedule(){
+function Login_ragist(){
   return(
     <div className='box-area'>
-    <Link to="/Schedule_page">일정 관리 {'>'}</Link>
+    <Link to="/Semi_login_page">로그인 및 회원가입하기 {'>'}</Link>
     </div>
   )
 };
 
-export default Schedule;
+export default Login_ragist;
