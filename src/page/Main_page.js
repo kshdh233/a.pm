@@ -1,4 +1,4 @@
-import FixedBottomNavigation from "../component/Nav";
+import FixedBottomNavigation from "../component/BottomNav";
 import './Main_page.css';
 import SearchBar from "../component/SearchBar";
 import { Search } from "@mui/icons-material";

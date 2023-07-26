@@ -1,6 +1,6 @@
 import SearchBar from "../component/SearchBar";
 import ButtonGroupComponent from "../component/ButtonGroup1";
-import FixedBottomNavigation from "../component/Nav";
+import FixedBottomNavigation from "../component/BottomNav";
 
 function Event_page() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import FixedBottomNavigation from "../component/Nav";
+import FixedBottomNavigation from "../component/BottomNav";
 import Login_ragist from "../component/Login_ragist";
 import Header from "../component/Header";
 import Schedule from "../component/Schedule";

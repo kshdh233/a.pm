@@ -22,12 +22,12 @@ import Venue_information_page from "./page/Venue_information_page.js";
 
 // component 폴더
 import All_play from "./component/All_play.js";
-import Nav from "./component/Nav.js";
+import Nav from "./component/BottomNav.js";
 import Popular_play from "./component/Popular_play.js";
 import SearchBar from "./component/SearchBar.js";
 import PaginationSize from './component/PaginationSize';
 import Popular_playList from './component/Popular_play.js';
-import FixedBottomNavigation from './component/Nav.js';
+import FixedBottomNavigation from './component/BottomNav.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
