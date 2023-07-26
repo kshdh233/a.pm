@@ -1,5 +1,5 @@
 import React from 'react';
-import FixedBottomNavigation from "../component/Nav";
+import FixedBottomNavigation from "../component/BottomNav";
 import Header from "../component/Header";
 import '../styles/Header.css';
 

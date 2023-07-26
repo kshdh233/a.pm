@@ -27,16 +27,16 @@ function FixedBottomNavigation() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="공연장 정보" icon={<Place />} />
+          <BottomNavigationAction label="공연장 정보" icon={<Place />} href='ConcertHall_page'/>
 
           <BottomNavigationAction label="공연 정보" icon={<TheaterComedy />} />
 
-          <BottomNavigationAction label="" icon={<Home />} />
+          <BottomNavigationAction label="" icon={<Home />} href='Main_page'/>
 
           <BottomNavigationAction label="찜" icon={<FavoriteIcon />} />
 
         
-          <BottomNavigationAction label="마이페이지" icon={<PersonOutline />} />
+          <BottomNavigationAction label="마이페이지" icon={<PersonOutline />} href='My_page'/>
 
         </BottomNavigation>
       </Paper>
