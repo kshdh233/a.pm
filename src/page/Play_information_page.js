@@ -2,7 +2,7 @@ import * as React from 'react';
 import SearchBar from '../component/SearchBar';
 import { Search } from '@mui/icons-material';
 import ButtonGroupComponent from '../component/ButtonGroup1';
-import FixedBottomNavigation from '../component/Nav';
+import FixedBottomNavigation from '../component/BottomNav';
 import { Button } from '@mui/material';
 
 function Play_information_page() {

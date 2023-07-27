@@ -1,0 +1,18 @@
+.Top-menu-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.Top-menu-item{
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+
+    padding:10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 20px;
+    
+}

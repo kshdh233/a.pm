@@ -1,17 +1,33 @@
-import FixedBottomNavigation from "../component/Nav";
+import FixedBottomNavigation from "../component/BottomNav";
 import './Main_page.css';
 import SearchBar from "../component/SearchBar";
 import { Search } from "@mui/icons-material";
+import TopNav from "../component/TopNav";
+import PerformanceList from "../component/Popular_play";
 
 function Main_page() {
   return (
     <>
-    <h1>메인 페이지</h1>
+    <h1 className="Logo">LOGO</h1>
     <SearchBar/>
-    <div>인기 공연</div> 
-    <div>전체 공연</div>
-    
+
+    <br/>
+
+    <div className="Popular-Performance-title">
+      인기 공연</div>
+    <br/>
+     <PerformanceList/>
+
+
+    <div className="Total-performance-title">
+      전체 공연</div>
+    <br/>
+      <PerformanceList/>
+
+
+    <FixedBottomNavigation/>
     </>
+
   );
 }
 

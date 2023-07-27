@@ -17,7 +17,7 @@ function FixedBottomNavigation() {
   const navigate = useNavigate();
   // label, icon, url
   const navInfo = [
-    ['공연장 정보', <Place />, '/'],
+    ['공연장 정보', <Place />, '/ConcertHall_page'],
     ['공연 정보', <TheaterComedy />, '/Play_information_page'],
     ['', <Home />, '/Main_page'],
     ['찜', <FavoriteIcon />, '/'],

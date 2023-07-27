@@ -19,15 +19,16 @@ import Play_information_page from "./page/Play_information_page.js";
 import Actor_schedule_page from "./page/Actor_schedule_page.js";
 import Event_page from "./page/Event_page.js";
 import Venue_information_page from "./page/Venue_information_page.js";
-
+import ConcertHall_page from './page/ConcertHall_page';
 // component 폴더
 import All_play from "./component/All_play.js";
-import Nav from "./component/Nav.js";
 import Popular_play from "./component/Popular_play.js";
 import SearchBar from "./component/SearchBar.js";
 import PaginationSize from './component/PaginationSize';
 import Popular_playList from './component/Popular_play.js';
-import FixedBottomNavigation from './component/Nav.js';
+import FixedBottomNavigation from './component/BottomNav.js';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -51,6 +52,7 @@ root.render(
         <Route path={"/SignIn_page"} element={<SignIn_page />} />
         <Route path={"/SignUp_page"} element={<SignUp_page />} />
         <Route path={"/Semi_login_page"} element={<Semi_login_page />} />
+        <Route path={"/ConcertHall_page"} element={<ConcertHall_page />} />
     </Routes>
   </BrowserRouter>
 

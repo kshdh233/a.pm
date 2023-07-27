@@ -1,4 +1,16 @@
-.header{
+
+.Logo{
     text-align: center;
-    background-color: red;
+}
+.Popular-Performance-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.Total-performance-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold
 }
