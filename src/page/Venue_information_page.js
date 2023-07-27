@@ -14,10 +14,7 @@ function Venue_information_page() {
 
     {/* Main Content */}
     <div style={{ flex: 1 }}>
-      <div>예고 영상</div> 
-      <div>포스터</div>
-      <div>공연 정보</div>
-      <div>공연 기간</div>
+      <div>공연장 정보</div> 
     </div>
 
     {/* Footer */}
