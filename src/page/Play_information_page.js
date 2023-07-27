@@ -1,15 +1,13 @@
 import * as React from 'react';
-import SearchBar from '../component/SearchBar';
-import { Search } from '@mui/icons-material';
 import ButtonGroupComponent from '../component/ButtonGroup1';
+import Header from '../component/Header';
 import FixedBottomNavigation from '../component/BottomNav';
-import { Button } from '@mui/material';
 
 function Play_information_page() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       {/* Header */}
-      <SearchBar />
+      <Header />
       <div style={{ padding: '8px', background: '#ffffff' }}>
         {/* Reduced size of the ButtonGroupComponent and added spacing between buttons */}
         <ButtonGroupComponent fontSize="12px"></ButtonGroupComponent>

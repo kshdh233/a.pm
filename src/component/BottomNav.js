@@ -12,13 +12,13 @@ import { useNavigate } from 'react-router';
 import { Outlet } from 'react-router-dom';
 
 function FixedBottomNavigation() {
-  const [value, setValue] = React.useState(4);
+  const [value, setValue] = React.useState(2);
   const ref = React.useRef(null);
   const navigate = useNavigate();
   // label, icon, url
   const navInfo = [
     ['공연장 정보', <Place />, '/ConcertHall_page'],
-    ['공연 정보', <TheaterComedy />, '/Play_information_page'],
+    ['공연 정보', <TheaterComedy />, '/Play_infor_home_page'],
     ['', <Home />, '/Main_page'],
     ['찜', <FavoriteIcon />, '/'],
     ['마이페이지', <PersonOutline />, '/My_page'],

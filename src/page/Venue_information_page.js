@@ -1,4 +1,4 @@
-import SearchBar from "../component/SearchBar";
+import Header from "../component/Header";
 import ButtonGroupComponent from "../component/ButtonGroup1";
 import FixedBottomNavigation from "../component/BottomNav";
 
@@ -6,7 +6,7 @@ function Venue_information_page() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
     {/* Header */}
-    <SearchBar />
+    <Header />
     <div style={{ padding: '8px', background: '#ffffff' }}>
       {/* Reduced size of the ButtonGroupComponent and added spacing between buttons */}
       <ButtonGroupComponent fontSize="12px"></ButtonGroupComponent>

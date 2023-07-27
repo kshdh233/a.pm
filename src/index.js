@@ -20,6 +20,8 @@ import Actor_schedule_page from "./page/Actor_schedule_page.js";
 import Event_page from "./page/Event_page.js";
 import Venue_information_page from "./page/Venue_information_page.js";
 import ConcertHall_page from './page/ConcertHall_page';
+import Play_infor_home_page from './page/Play_infor_home_page';
+
 // component 폴더
 import All_play from "./component/All_play.js";
 import Popular_play from "./component/Popular_play.js";
@@ -36,12 +38,14 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<FixedBottomNavigation />}>
-        <Route path={"/"} element={<App />} />
+        <Route path={"/"} element={<Main_page />} />
         <Route path={"/Main_page"} element={<Main_page />} />
         {/* <Route path={"/SearchBar"} element={<SearchBar />} /> */}
         {/* <Route path={"/Pagination"} element={<PaginationSize />} /> */}
         <Route path={"/Popular_play"} element={<Popular_playList />} />
         <Route path={"/My_page"} element={<My_page />} />
+        <Route path={"/ConcertHall_page"} element={<ConcertHall_page />} />
+        <Route path={"/Play_infor_home_page"} element={<Play_infor_home_page />} />
 
         <Route path={"/Schedule_page"} element={<Schedule_page />} />
         <Route path={"/Play_information_page"} element={<Play_information_page />} />
@@ -52,7 +56,6 @@ root.render(
         <Route path={"/SignIn_page"} element={<SignIn_page />} />
         <Route path={"/SignUp_page"} element={<SignUp_page />} />
         <Route path={"/Semi_login_page"} element={<Semi_login_page />} />
-        <Route path={"/ConcertHall_page"} element={<ConcertHall_page />} />
     </Routes>
   </BrowserRouter>
 
