@@ -1,16 +1,38 @@
 import '../styles/TopNav.css'
+import React from 'react' ;
+import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function TopNav(){
+  const navigate = useNavigate();
+
+  const navigateToLoca = ()=>{
+    navigate("/Location_page");
+  }
+  const navigateToSeeya = ()=>{
+    navigate("/Seeya_page");
+  }
+  const navigateToNP = ()=>{
+    navigate("/NowPerformance_page");
+  }
     return(
-        
+     
         <div className="Top-menu-container">
-            <button className="Top-menu-item" href="Address_page">주소</button>
-            <div className="Top-menu-item">화장실</div>
-            <div className="Top-menu-item">시야</div>
-            <div className="Top-menu-item">진행중인 공연</div>
+
+          <button onClick={navigateToLoca}className="Top-menu-item" >주소,화장실</button>
+           
+            <button onClick={navigateToSeeya}className="Top-menu-item">시야</button>
+
+            <button onClick={navigateToNP}className="Top-menu-item">진행중인 공연</button>
         </div>
+
+     
     )
 }
 export default TopNav;
+
+
+
+
 

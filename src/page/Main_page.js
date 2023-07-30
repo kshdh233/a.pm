@@ -1,5 +1,6 @@
 import FixedBottomNavigation from "../component/BottomNav";
 import './Main_page.css';
+import '../styles/Logo.css';
 import SearchBar from "../component/SearchBar";
 import { Search } from "@mui/icons-material";
 import TopNav from "../component/TopNav";

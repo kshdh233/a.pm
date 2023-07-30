@@ -18,7 +18,7 @@ function ButtonGroupComponent() {
     navigate("/Event_page")
   }
   const navigateToVenue = ()=> {
-    navigate("/Venue_information_page")
+    navigate("/Venue_i nformation_page")
   }
   
   return (

@@ -39,7 +39,12 @@ function FixedBottomNavigation() {
               setValue(newValue);
             }}
           >
-            {navInfo.map((nav, idx) => <BottomNavigationAction key={idx} label={nav[0]} icon={nav[1]} />
+            {navInfo.map((nav, idx) => 
+            <BottomNavigationAction 
+            key={idx} 
+            label={nav[0]} 
+            icon={nav[1]} 
+            />
             )}
           </BottomNavigation>
         </Paper>
