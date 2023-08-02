@@ -5,6 +5,7 @@ import styles from "../styles/ButtonGroup1.module.css"; // Assuming you have a C
 import { useNavigate } from 'react-router-dom';
 
 
+
 function ButtonGroupComponent() {
   const navigate = useNavigate();
   
@@ -18,7 +19,7 @@ function ButtonGroupComponent() {
     navigate("/Event_page")
   }
   const navigateToVenue = ()=> {
-    navigate("/Venue_i nformation_page")
+    navigate("/Venue_information_page")
   }
   
   return (

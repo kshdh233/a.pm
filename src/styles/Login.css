@@ -1,9 +1,16 @@
 .box-area {
+  /* Default styles for the box */
   background-color: #ffffff;
   padding: 15px;
-  border: 0.01px solid #ccc9c9;
-  border-radius: 10px;
   margin-bottom: 10px;
+
+  border: none !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Media query for small mobile screens (adjust the width as needed) */
+  @media (max-width: 480px) {
+    margin: 0 20px; /* Add a small margin on the left and right */
+  }
 }
 
 .box-area a {
