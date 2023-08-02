@@ -1,6 +1,7 @@
 import Header from "../component/Header";
 import ButtonGroupComponent from "../component/ButtonGroup1";
 import FixedBottomNavigation from "../component/BottomNav";
+import Api from "../component/Api";
 
 
 function Event_page() {
@@ -18,6 +19,8 @@ function Event_page() {
         <div>공연 관련 이벤트</div> 
         <div>재관람 혜택</div>
       </div>
+
+      <Api />
 
       {/* Footer */}
       <FixedBottomNavigation />
