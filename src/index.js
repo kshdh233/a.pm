@@ -32,8 +32,14 @@ import SearchBar from "./component/SearchBar.js";
 import PaginationSize from './component/PaginationSize';
 import Popular_playList from './component/Popular_play.js';
 import FixedBottomNavigation from './component/BottomNav.js';
-
-
+import Cjazit from './seeya/Cjazit';
+import JTN_1 from './seeya/JTN_1';
+import Ktg from './seeya/Ktg';
+import LGArt from './seeya/LGArt';
+import LG_sig from './seeya/LG_signature_hall';
+import Tom_1 from './seeya/Tom_1';
+import Tom_2 from './seeya/Tom_2';
+import KyemyungArt from './seeya/KyemyungArt';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -65,6 +71,16 @@ root.render(
         <Route path={"/Seeya_page"} element={<Seeya/>}/>
         <Route path={"/NowPerformance_page"} element={<NowPerformance/>}/>
         
+        <Route path={"/Cjazit"} element={<Cjazit/>}/>
+        <Route path={"/JTN_1"} element={<JTN_1/>}/>
+        <Route path={"/Ktg"} element={<Ktg/>}/>
+        <Route path={"/LGArt"} element={<LGArt/>}/>
+        <Route path={"/LG_sig"} element={<LG_sig/>}/>
+        <Route path={"/Tom_1"} element={<Tom_1/>}/>
+        <Route path={"/Tom_2"} element={<Tom_2/>}/>
+        <Route path={"/KyemyungArt"} element={<KyemyungArt/>}/>
+
+
     </Routes>
   </BrowserRouter>
 

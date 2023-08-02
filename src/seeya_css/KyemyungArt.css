@@ -1,0 +1,131 @@
+#kyemyung.AAOP1{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#kyemyung.A1F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    justify-content: center;
+    transform: rotate(10deg);
+}
+#kyemyung.A11F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-left: 20px;
+    padding-top: 80px;
+    transform: rotate(10deg);
+}
+#kyemyung.B1F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 40px;
+    transform: rotate(3deg);
+}
+#kyemyung.B11F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 100px;
+}
+#kyemyung.C1F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 50px;
+}
+#kyemyung.C11F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#kyemyung.D1F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 40px;
+    transform: rotate(-3deg);
+}
+#kyemyung.D11F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    transform: rotate(-10deg);
+    padding-top: 80px;
+    padding-right: 20px;
+}
+#kyemyung.E1F{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    justify-content: center;
+    transform: rotate(-10deg);
+}
+
+
+#kyemyung.A1G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#kyemyung.A11G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#kyemyung.B1G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#kyemyung.B11G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#kyemyung.C1G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#kyemyung.C11G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#kyemyung.D1G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#kyemyung.D11G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#kyemyung.E1G{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
