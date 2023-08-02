@@ -2,6 +2,7 @@ import Header from "../component/Header";
 import ButtonGroupComponent from "../component/ButtonGroup1";
 import FixedBottomNavigation from "../component/BottomNav";
 
+
 function Event_page() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>

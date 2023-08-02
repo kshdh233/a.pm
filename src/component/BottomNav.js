@@ -20,7 +20,7 @@ function FixedBottomNavigation() {
     ['공연장 정보', <Place />, '/ConcertHall_page'],
     ['공연 정보', <TheaterComedy />, '/Play_infor_home_page'],
     ['', <Home />, '/Main_page'],
-    ['찜', <FavoriteIcon />, '/'],
+    ['찜', <FavoriteIcon />, '/WishList_page'],
     ['마이페이지', <PersonOutline />, '/My_page'],
   ]
   return (

@@ -24,6 +24,7 @@ import Seeya from './page/Seeya_page';
 import NowPerformance from './page/NowPerformance_page';
 import Location from './page/Location_page';
 import Play_infor_home_page from './page/Play_infor_home_page';
+import WishList_page from './page/WishList_page';
 
 // component 폴더
 import All_play from "./component/All_play.js";
@@ -55,6 +56,7 @@ root.render(
         <Route path={"/My_page"} element={<My_page />} />
         <Route path={"/ConcertHall_page"} element={<ConcertHall_page />} />
         <Route path={"/Play_infor_home_page"} element={<Play_infor_home_page />} />
+        <Route path={"/WishList_page"} element={<WishList_page />} />
 
         <Route path={"/Schedule_page"} element={<Schedule_page />} />
         <Route path={"/Play_information_page"} element={<Play_information_page />} />
