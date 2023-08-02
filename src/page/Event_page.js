@@ -13,7 +13,7 @@ function Event_page() {
         {/* Reduced size of the ButtonGroupComponent and added spacing between buttons */}
         <ButtonGroupComponent fontSize="12px"></ButtonGroupComponent>
       </div>
-
+    
       {/* Main Content */}
       <div style={{ flex: 1 }}>
         <div>공연 관련 이벤트</div> 

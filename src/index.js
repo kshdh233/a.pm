@@ -81,6 +81,7 @@ root.render(
         <Route path={"/Tom_1"} element={<Tom_1/>}/>
         <Route path={"/Tom_2"} element={<Tom_2/>}/>
         <Route path={"/KyemyungArt"} element={<KyemyungArt/>}/>
+        <Route path={"/App"} element={<App/>}/>
 
 
     </Routes>

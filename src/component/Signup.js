@@ -35,19 +35,19 @@ function Signup(props) {
     }
 
     // Check if ID already exists
-    try {
-      const response = await fetch('/api/checkID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ id: ID }),
-      });
+    // try {
+    //   const response = await fetch('/api/checkID', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ id: ID }),
+    //   });
 
-      const data = await response.json();
-      if (data.idExists) {
-        return alert('이미 사용 중인 ID입니다.');
-      }
+    //   const data = await response.json();
+    //   if (data.idExists) {
+    //     return alert('이미 사용 중인 ID입니다.');
+    //   }
 
       // If ID doesn't exist, proceed with registration
       let body = {
@@ -66,10 +66,10 @@ function Signup(props) {
       //       alert('Error');
       //     }
       //   });
-    } catch (error) {
-      console.error('Error checking ID:', error);
-      alert('서버 오류가 발생했습니다.');
-    }
+  //   } catch (error) {
+  //     console.error('Error checking ID:', error);
+  //     alert('서버 오류가 발생했습니다.');
+  //   }
   };
 
   return (
