@@ -3,6 +3,28 @@ import React, { useEffect, useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import '../styles/Popular_play.css';
 
+import {createTheme, ThemeProvider} from '@mui/material/styles';
+import Loopi from '../img/Loopi.jpg';
+import sponge from '../img/spongebab.png';
+import ToungE from '../img/ToungE.webp';
+import { Block } from '@mui/icons-material';
+
+const theme = createTheme({
+  components: {
+    MuiPagination: {
+      styleOverrides: {
+        ul: {
+          justifyContent: 'center', // 페이지 번호를 중앙에 정렬
+          padding: 0,
+        },
+        root: {
+          marginTop: '20px', // Pagination 컴포넌트와 위 컴포넌트 간의 간격 설정
+        },
+      },
+    },
+  },
+});
+
 export default function PerformanceList() {
   const [performances, setPerformances] = useState([]);  // 공연 그림 db 배열로 저장 
   const [currentPage, setCurrentPage] = useState(1); // 현재 page =1 
@@ -15,33 +37,33 @@ export default function PerformanceList() {
     const testPerformances = [
       {
         id:1,
-        image:'../img/Loopi.jpg',
+        image:Loopi,
         title: 'Loopi',
-        description : '설명',
+        // description : '뭘바요',
       },
       {
         id:2,
-        image:'/img/spongebab.png',
+        image:sponge,
         title: 'spongebab',
-        description : '설명',
+        // description : '밥인데요',
       },{
         id:3,
-        image:'/img/ToungE.png',
+        image:ToungE,
         title: 'ToungE',
-        description : '설명',
+        description : '뚱인데요',
       },{
         id:4,
-        image:'/img/ToungE.png',
-        title: 'ToungE',
+        image: Loopi,
+        title: 'Loopi',
         description : '설명',
       },{
         id:5,
-        image:'/img/ToungE.png',
-        title: 'ToungE',
+        image:sponge,
+        title: 'spongebab',
         description : '설명',
       },{
         id:6,
-        image:'/img/ToungE.png',
+        image:ToungE,
         title: 'ToungE',
         description : '설명',
       }
@@ -73,6 +95,7 @@ export default function PerformanceList() {
         </div>
       ))}
 
+    <hr/>
       <Pagination 
         count={totalPages}
         page={currentPage}
@@ -80,6 +103,7 @@ export default function PerformanceList() {
         size="large"
       />
     </div>
+   
   );
 }
 

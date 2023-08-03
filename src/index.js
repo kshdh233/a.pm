@@ -20,6 +20,7 @@ import Actor_schedule_page from "./page/Actor_schedule_page.js";
 import Event_page from "./page/Event_page.js";
 import Venue_information_page from "./page/Venue_information_page.js";
 import ConcertHall_page from './page/ConcertHall_page';
+import Information from './page/Information_page';
 import Seeya from './page/Seeya_page';
 import NowPerformance from './page/NowPerformance_page';
 import Location from './page/Location_page';
@@ -69,6 +70,7 @@ root.render(
         <Route path={"/Semi_login_page"} element={<Semi_login_page />} />
         <Route path={"/ConcertHall_page"} element={<ConcertHall_page />} />
         
+        <Route path={"/Information_page"} element={<Information/>}/>
         <Route path={"/Location_page"} element={<Location/>}/>
         <Route path={"/Seeya_page"} element={<Seeya/>}/>
         <Route path={"/NowPerformance_page"} element={<NowPerformance/>}/>
