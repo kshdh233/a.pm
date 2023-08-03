@@ -1,16 +1,15 @@
 import Header from "../component/Header";
-import ButtonGroupComponent from "../component/ButtonGroup1";
 import FixedBottomNavigation from "../component/BottomNav";
+import Btn from "../component/Btn";
+import '../styles/Btn.css';
 
 function Actor_schedule_page() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       {/* Header */}
       <Header />
-      <div style={{ padding: '8px', background: '#ffffff' }}>
-        {/* Reduced size of the ButtonGroupComponent and added spacing between buttons */}
-        <ButtonGroupComponent fontSize="12px"></ButtonGroupComponent>
-      </div>
+      
+      <Btn />
 
       {/* Main Content */}
       <div style={{ flex: 1 }}>
