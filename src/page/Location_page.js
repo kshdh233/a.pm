@@ -3,6 +3,7 @@ import SearchBar from "../component/SearchBar";
 import TopNav from "../component/TopNav";
 import { Search } from "@mui/icons-material";
 import '../styles/Logo.css'
+import Map from "../component/Map";
 
 function Location(){
     return<>
@@ -10,7 +11,8 @@ function Location(){
     <SearchBar/>
     <TopNav/>
     <h1>주소, 화장실 정보</h1>
-
+    <Map/>
+    
     <FixedBottomNavigation/>
     </>
     
