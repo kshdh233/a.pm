@@ -1,5 +1,4 @@
 import Header from "../component/Header";
-import FixedBottomNavigation from "../component/BottomNav";
 import Btn from "../component/Btn";
 import '../styles/Btn.css';
 
@@ -17,7 +16,6 @@ function Actor_schedule_page() {
       </div>
 
       {/* Footer */}
-      <FixedBottomNavigation />
     </div>
   );
 }

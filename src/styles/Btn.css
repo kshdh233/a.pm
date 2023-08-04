@@ -35,6 +35,10 @@
   margin: 4px;
 }
 
+.swiper-slide-btn {
+  color: black;
+}
+
 /* 미디어 쿼리를 사용하여 반응형 스타일 적용 */
 @media (max-width: 768px) {
   .swiper-slide-btn {

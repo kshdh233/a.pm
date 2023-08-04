@@ -1,5 +1,4 @@
 import React from 'react';
-import FixedBottomNavigation from "../component/BottomNav";
 import Header from '../component/Header';
 import WishList from '../component/WishList';
 import '../styles/WishList.css';
@@ -9,7 +8,6 @@ function WishList_page() {
     <div>
     <Header />
     <WishList />
-    <FixedBottomNavigation />
     </div>
   );
 }

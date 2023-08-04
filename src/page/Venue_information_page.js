@@ -1,5 +1,4 @@
 import Header from "../component/Header";
-import FixedBottomNavigation from "../component/BottomNav";
 import Btn from "../component/Btn";
 import '../styles/Btn.css';
 
@@ -16,8 +15,6 @@ function Venue_information_page() {
       <div>공연장 정보</div> 
     </div>
 
-    {/* Footer */}
-    <FixedBottomNavigation />
   </div>
   );
 }

@@ -1,45 +1,31 @@
 import React, { useState } from "react";
 import { Search } from "@mui/icons-material"; // Google Material Icons의 돋보기 아이콘 임포트
 import "../styles/SearchBar.css";
+import { Autocomplete, TextField } from "@mui/material";
+
+const arr = ['1', '2', '3', '4', '5'];
 
 const SearchBar = (props) => {
-  const products = props.searchItems;
   const [searchValue, setSearchValue] = useState("");
 
   const handleInputChange = (event) => {
     setSearchValue(event.target.value);
+    // value로 공연장 전체 데이터 filtering 해서 자동완성에 보여주기
   };
 
-  const handleInputClear = () => {
-    setSearchValue("");
-  };
-
-  const filteredProducts =
-    products && products.filter((product) => product.includes(searchValue));
-
-  const DisplayButton = searchValue.length >0; 
   return (
-    <div className="searchBar">
-      <div className="searchIconContainer">
-        <Search className="searchIcon" />
+    <div>
+      <div>
+        <Autocomplete
+          options={arr}
+          placeholder="공연, 공연장 검색하기"
+          onChange={(e, newValue) => setSearchValue(newValue)}
+          value={searchValue}
+          renderInput={(params) => (
+            <TextField {...params} label="공연, 공연장 검색하기"/>
+          )}
+        />
       </div>
-      <input
-        className="textcss"
-        type="text"
-        value={searchValue}
-        placeholder="공연, 공연장 검색하기"
-        onChange={handleInputChange}
-      />
-      {DisplayButton && (
-      <button className="clearButton" onClick={handleInputClear}>
-        확인
-      </button>)}
-      <ul>
-        {filteredProducts &&
-          filteredProducts.map((product) => {
-            return <li key={product}>{product}</li>;
-          })}
-      </ul>
     </div>
   );
 };

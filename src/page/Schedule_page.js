@@ -1,5 +1,4 @@
 import React from 'react';
-import FixedBottomNavigation from "../component/BottomNav";
 import Header from "../component/Header";
 import Calender from "../component/Calender";
 import '../styles/Header.css';
@@ -14,7 +13,6 @@ function Schedule_page() {
         <Calender />
       </div>
 
-      <FixedBottomNavigation />
     </div>
   );
 }

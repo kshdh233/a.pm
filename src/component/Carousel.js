@@ -20,15 +20,15 @@ const Carousell = () => {
   return (
     <div className="flex justify-center items-center py-5 px-3">
       <Link to="/Play_information_page">
-      <div style={{ maxHeight: '50vh' /* Set the desired max height here */ }}>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
         <Carousel
+          width={'90vw'}
           showArrows={false}
           autoPlay={true}
           infiniteLoop={true}
           showThumbs={false}
           selectedItem={images[currentIndex]}
           onChange={handleChange}
-          className="w-[400px] lg:hidden"
         >
           {renderSlides}
         </Carousel>

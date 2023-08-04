@@ -1,4 +1,3 @@
-import FixedBottomNavigation from "../component/BottomNav";
 import './Main_page.css';
 import '../styles/Logo.css';
 import SearchBar from "../component/SearchBar";
@@ -6,10 +5,11 @@ import { Search } from "@mui/icons-material";
 import TopNav from "../component/TopNav";
 import PerformanceList from "../component/Popular_play";
 import '../page_style/main_page.css';
+import Header from "../component/Header";
 function Main_page() {
   return (
     <>
-    <h1 className="Logo">LOGO</h1>
+    <Header></Header>
     
     <div className="main_container">
 
@@ -29,7 +29,6 @@ function Main_page() {
           <PerformanceList/>
         </div>
       </div>
-    <FixedBottomNavigation/>
     </>
 
   );

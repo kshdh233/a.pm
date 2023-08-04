@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Header from '../component/Header';
-import FixedBottomNavigation from '../component/BottomNav';
 import Btn from "../component/Btn";
 import '../styles/Btn.css';
 
@@ -20,8 +19,6 @@ function Play_information_page() {
         <div>공연 기간</div>
       </div>
 
-      {/* Footer */}
-      <FixedBottomNavigation />
     </div>
   );
 }

@@ -8,23 +8,22 @@ function TopNav(){
   const navigate = useNavigate();
 
   const navigateToInfo = ()=>{
-    navigate("/Information_page");
+    navigate("/ConcertHall_page/Information_page");
   }
 
   const navigateToLoca = ()=>{
-    navigate("/Location_page");
+    navigate("/ConcertHall_page/Location_page");
   }
   const navigateToSeeya = ()=>{
-    navigate("/Seeya_page");
+    navigate("/ConcertHall_page/Seeya_page");
   }
   const navigateToNP = ()=>{
-    navigate("/NowPerformance_page");
+    navigate("/ConcertHall_page/NowPerformance_page");
   }
     return(
      
         <div className="Top-menu-container">
-          <button onClick={navigateToInfo}
-          className="Top-menu-item">공연장 정보</button>
+          <button onClick={navigateToInfo} className="Top-menu-item">공연장 정보</button>
 
           <button onClick={navigateToLoca}className="Top-menu-item" >주소,화장실</button>
            

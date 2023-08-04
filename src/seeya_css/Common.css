@@ -1,244 +1,245 @@
-
-.seat_all.seat-all{
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    width: max-content;
-    overflow: auto;
-    margin: 0 auto;
-    display: block;
-    padding-top: 120px;}
-
-.rating-info{
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    width: max-content;
-    overflow: auto;
-    margin: 0 auto;
-    padding-top: 120px;
-    display: block;
-    }
-
-    /* 전체 층( 층+좌석) */
-.floor{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    padding-bottom: 40px;
-    overflow-y: scroll;
-    zoom: normal;
-    }
-
-    /* 좌석표에 층 명시 */
-.seating_table_container{
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
-    font-weight: bolder;
+.seat_all.seat-all {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  width: max-content;
+  overflow: auto;
+  margin: 0 auto;
+  display: block;
+  padding-top: 120px;
 }
-.seattable_zone_container{
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    height: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+
+.rating-info {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  width: max-content;
+  overflow: auto;
+  margin: 0 auto;
+  padding-top: 120px;
+  display: block;
+}
+
+/* 전체 층( 층+좌석) */
+.floor {
+    border: 1px solid lightgrey;
+  width: 850px;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  padding-bottom: 40px;
+  overflow-y: scroll;
+  zoom: normal;
+}
+
+/* 좌석표에 층 명시 */
+.seating_table_container {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  font-weight: bolder;
+}
+.seattable_zone_container {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 /* 층 그 자체 */
-.seattable_floor{
-    font-weight: bolder;
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+.seattable_floor {
+  font-weight: bolder;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
 }
-.seattable_zone{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: black;
-    font-weight: bolder;
+.seattable_zone {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: black;
+  font-weight: bolder;
 }
 /* 각층 좌석 표시  */
-.floor_container{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
+.floor_container {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-.row_LGArt{
-box-sizing: border-box;
-margin: 0;
-font-family: 'Noto Sans KR', sans-serif;
-display: flex;
-flex-wrap: wrap;
-justify-content: flex-end;
+.row_LGArt {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* 열 */
 
-
 /* 좌석 */
 /* seeyatheater
 좌석표에 열 표시해주는 코드  */
-#row_zone{
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    min-width: 25px;
+#row_zone {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  min-width: 25px;
 }
 /* ex, A */
-.seat_num{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
+.seat_num {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
 }
 /* 진짜 좌석표에 표시되는 구역 이름         */
-    /* 열 */
+/* 열 */
 /* 좌석 */
 /* 좌석표에 열 표시해주는 코드     */
-.seats{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    cursor: pointer;
+.seats {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
 }
-#seat.real.disabled.no_review{
-    cursor: pointer;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-image: url('../img/disable.jpg');
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #ebebeb;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    width: 25px;
+#seat.real.disabled.no_review {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  background-image: url("../img/disable.jpg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ebebeb;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  width: 25px;
 }
-#seat{
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    width: 25px;
+#seat {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  width: 25px;
 }
 /* 일반좌석 */
 /* pk="33013" 기본키 값 계속 변경 db관련 */
-#seat.real.no_review{
-    cursor: pointer;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #ebebeb;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    width: 25px;
-}  
+#seat.real.no_review {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #ebebeb;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  width: 25px;
+}
 
 /* 좋아요에 따라 색상 변경*/
-#seat.real.red{
-    cursor: pointer;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #f22713;
-    opacity: 80%;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    width: 25px;
+#seat.real.red {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #f22713;
+  opacity: 80%;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  width: 25px;
 }
-#seat.real.orange{
-    cursor: pointer;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #ff9924;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    width: 25px;
+#seat.real.orange {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #ff9924;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  width: 25px;
 }
-#seat.real.yellow{
-    cursor: pointer;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #ffe647;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    width: 25px;
+#seat.real.yellow {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #ffe647;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  width: 25px;
 }
-#seat.real.lightgreen{
-    cursor: pointer;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #87d37c;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    width: 25px;
+#seat.real.lightgreen {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #87d37c;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  width: 25px;
 }
-#seat.real.green{
-    cursor: pointer;
-    box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #00b16a;
-    height: 25px;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10%;
-    margin: 2.5px;
-    width: 25px;
+#seat.real.green {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #00b16a;
+  height: 25px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10%;
+  margin: 2.5px;
+  width: 25px;
 }
