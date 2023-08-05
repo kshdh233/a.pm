@@ -1,8 +1,6 @@
-import "../styles/Logo.css";
-import SearchBar from "../component/SearchBar";
-import TopNav from "../component/TopNav";
-import PerformanceList from "../component/Popular_play";
-import "../styles/Center.css";
+import "../../styles/Logo.css";
+import PerformanceList from "../../component/Body/Popular_play";
+import "../../styles/Center.css";
 
 function NowPerformance() {
   return (

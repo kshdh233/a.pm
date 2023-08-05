@@ -1,6 +1,6 @@
-import Header from "../component/Header";
-import Btn from "../component/Btn";
-import '../styles/Btn.css';
+import Header from "../../component/Header/Header";
+import Btn from "../../component/Body/Btn";
+import '../../styles/Btn.css';
 
 function Venue_information_page() {
   return (

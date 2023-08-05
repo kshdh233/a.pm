@@ -11,28 +11,24 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Main_page from "./page/Main_page.js";
 import My_page from "./page/My_page.js";
 import Schedule_page from "./page/Schedule_page.js";
-import SignIn_page from "./page/SignIn_page.js";
-import SignUp_page from "./page/SignUp_page.js";
-import Semi_login_page from "./page/Semi_login_page.js";
-import Play_information_page from "./page/Play_information_page.js";
-import Actor_schedule_page from "./page/Actor_schedule_page.js";
-import Event_page from "./page/Event_page.js";
-import Venue_information_page from "./page/Venue_information_page.js";
-import ConcertHall_page from "./page/ConcertHall_page";
-import Information from "./page/Information_page";
-import Seeya from "./page/Seeya_page";
-import NowPerformance from "./page/NowPerformance_page";
-import Location from "./page/Location_page";
-import Play_infor_home_page from "./page/Play_infor_home_page";
+import SignIn_page from "./page/Login/SignIn_page.js";
+import SignUp_page from "./page/Login/SignUp_page.js";
+import Semi_login_page from "./page/Login/Semi_login_page.js";
+import Play_infor_home_page from "./page/Performance/Play_infor_home_page";
+import Play_information_page from "./page/Performance/Play_information_page.js";
+import Actor_schedule_page from "./page/Performance/Actor_schedule_page.js";
+import Event_page from "./page/Performance/Event_page.js";
+import Venue_information_page from "./page/Performance/Venue_information_page.js";
+import ConcertHall_page from "./page/Concert_hall/ConcertHall_page";
+import Information from "./page/Concert_hall/Information_page";
+import Seeya from "./page/Concert_hall/Seeya_page";
+import NowPerformance from "./page/Concert_hall/NowPerformance_page";
+import Location from "./page/Concert_hall/Location_page";
 import WishList_page from "./page/WishList_page";
 
 // component 폴더
-import All_play from "./component/All_play.js";
-import Popular_play from "./component/Popular_play.js";
-import SearchBar from "./component/SearchBar.js";
-import PaginationSize from "./component/PaginationSize";
-import Popular_playList from "./component/Popular_play.js";
-import FixedBottomNavigation from "./component/BottomNav.js";
+import Popular_playList from "./component/Body/Popular_play.js";
+import FixedBottomNavigation from "./component/Footer/BottomNav.js";
 import Cjazit from "./seeya/Cjazit";
 import JTN_1 from "./seeya/JTN_1";
 import Ktg from "./seeya/Ktg";
@@ -47,16 +43,15 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<FixedBottomNavigation />}>
+        <Route path={"/"} element={<Main_page />} />
         <Route path={"/Main_page"} element={<Main_page />} />
         {/* <Route path={"/SearchBar"} element={<SearchBar />} /> */}
         {/* <Route path={"/Pagination"} element={<PaginationSize />} /> */}
         <Route path={"/Popular_play"} element={<Popular_playList />} />
         <Route path={"/My_page"} element={<My_page />} />
-        <Route path={"/Play_infor_home_page"} element={<Play_infor_home_page />} />
-
         <Route path={"/WishList_page"} element={<WishList_page />} />
-
         <Route path={"/Schedule_page"} element={<Schedule_page />} />
+        <Route path={"/Play_infor_home_page"} element={<Play_infor_home_page />} />
         <Route path={"/Play_information_page"} element={<Play_information_page />} />
         <Route path={"/Actor_schedule_page"} element={<Actor_schedule_page />} />
         <Route path={"/Event_page"} element={<Event_page />} />
@@ -70,7 +65,6 @@ root.render(
         <Route path={"/SignIn_page"} element={<SignIn_page />} />
         <Route path={"/SignUp_page"} element={<SignUp_page />} />
         <Route path={"/Semi_login_page"} element={<Semi_login_page />} />
-        <Route path={"/ConcertHall_page"} element={<ConcertHall_page />} />
 
         <Route path={"/Cjazit"} element={<Cjazit />} />
         <Route path={"/JTN_1"} element={<JTN_1 />} />
