@@ -2,7 +2,7 @@ import SearchBar from "../../component/About_Search/SearchBar";
 import TopNav from "../../component/About_Nav/TopNav";
 import { Search } from "@mui/icons-material";
 import '../../styles/Logo.css'
-import Map from "../../component/Map";
+import Map from "../../component/Body/Map";
 import '../../styles/Center.css';
 function Location(){
     return<>

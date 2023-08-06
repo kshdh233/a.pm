@@ -29,8 +29,8 @@ import Location from "./page/All_ConcertHall_page/Location_page";
 import WishList_page from "./page/WishList_page";
 
 // component 폴더
-import Popular_playList from "./component/Popular_play.js";
-import FixedBottomNavigation from "./component/BottomNav.js";
+import Popular_playList from "./component/About_Performance/Popular_play";
+import FixedBottomNavigation from "./component/About_Nav/BottomNav";
 import Cjazit from "./seeya/Cjazit";
 import JTN_1 from "./seeya/JTN_1";
 import Ktg from "./seeya/Ktg";

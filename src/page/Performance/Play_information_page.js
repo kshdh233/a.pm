@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Header from '../../component/Header';
+import Header from '../../component/About_Logo/Header';
 import Btn from "../../component/About_Nav/Btn";
 import '../../styles/Btn.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Login_ragist from "../component/Body/Login_ragist";
-import Header from "../component/Header";
+import Header from "../component/About_Logo/Header";
 import Schedule from "../component/Body/Schedule";
 import '../styles/Login.css';
 import '../styles/Header.css';

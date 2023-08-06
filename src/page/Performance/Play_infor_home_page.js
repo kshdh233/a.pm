@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Header from '../../component/Header';
+import Header from '../../component/About_Logo/Header';
 import SearchBar from "../../component/About_Search/SearchBar";
 import Carousell from "../../component/Body/Carousel";
 
