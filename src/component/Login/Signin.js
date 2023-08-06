@@ -35,20 +35,23 @@ function Login(props) {
       if (response.status === 200) {
         // 로그인 성공 시 홈 페이지로 이동
         navigate('/Main_page');
-      } else {
-        // 서버 응답을 JSON 형태로 파싱하여 오류 메시지 가져오기
+      } else if (response.status === 401) {
+        // 로그인 실패 시 서버 응답을 JSON 형태로 파싱하여 오류 메시지 가져오기
         const data = await response.json();
 
-        if (data && data.message) {
+        if (data && data.error) {
           // 오류 메시지가 존재하는 경우, 메시지를 출력
-          alert(data.message);
+          alert(data.error);
         } else {
           // 오류 메시지가 없는 경우, 기본 오류 메시지 출력
-          alert('로그인 실패: 서버에서 응답을 받지 못했습니다.');
+          alert('로그인 실패: 사용자 이름 또는 비밀번호가 올바르지 않습니다.');
         }
+      } else {
+        // 기타 오류 상태 코드 처리
+        alert('로그인 실패: 서버에서 응답을 받지 못했습니다.');
       }
     } catch (error) {
-      console.error('Error during login:', error);
+      console.error('로그인 오류:', error);
       alert('서버 오류가 발생했습니다.');
     }
   };
@@ -71,7 +74,7 @@ function Login(props) {
         </button>
       </form>
       <br />
-      <Link to="/signup">회원가입 페이지로 이동</Link>
+      <Link to="/signup_page">회원가입 페이지로 이동</Link>
     </div>
   )
 }

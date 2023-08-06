@@ -49,6 +49,11 @@ import NowPerformance from "./page/All_ConcertHall_page/NowPerformance_page";
 import Location from "./page/All_ConcertHall_page/Location_page";
 import WishList_page from "./page/WishList_page";
 
+import PmShowList_page from "./page/PmShowList_page";
+import ActorList_page from "./page/ActorList_page";
+import TheaterList_page from "./page/TheaterList_page";
+import Actor_page from "./page/Actor_page";
+
 // component 폴더
 import Popular_playList from "./component/About_Performance/Popular_play";
 import FixedBottomNavigation from "./component/About_Nav/BottomNav";
@@ -101,6 +106,11 @@ root.render(
         <Route path={"/The_tale_Actor_schedule_page"} element={<The_tale_Actor_schedule_page />} />
         <Route path={"/The_tale_Event_page"} element={<The_tale_Event_page />} />
         <Route path={"/The_tale_Venue_information_page"} element={<The_tale_Venue_information_page />} />
+
+        <Route path={"/PmShowList_page"} element={<PmShowList_page />} />
+        <Route path={"/ActorList_page"} element={<ActorList_page />} />
+        <Route path={"/TheaterList_page"} element={<TheaterList_page />} />
+        <Route path={"/Actor_page"} element={<Actor_page />} />
 
         <Route path={"/ConcertHall_page"} element={<ConcertHall_page />}>
           <Route path={"Information_page"} element={<Information />} />
