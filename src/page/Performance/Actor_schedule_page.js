@@ -1,5 +1,5 @@
 import Header from "../../component/Header";
-import Btn from "../../component/Body/Btn";
+import Btn from "../../component/About_Nav/Btn";
 import '../../styles/Btn.css';
 
 function Actor_schedule_page() {

@@ -1,9 +1,9 @@
 import './Main_page.css';
-import '../styles/Logo.css';
-import SearchBar from "../component/SearchBar";
-import PerformanceList from "../component/Popular_play";
-import '../page_style/main_page.css';
-import Header from "../component/Header";
+import '../../styles/Logo.css';
+import SearchBar from "../../component/About_Search/SearchBar";
+import PerformanceList from "../../component/Popular_play";
+import './Main_page.css';
+import Header from "../../component/Header";
 function Main_page() {
   return (
     <>

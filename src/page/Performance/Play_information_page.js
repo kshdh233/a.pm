@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Header from '../../component/Header';
-import Btn from "../../component/Body/Btn";
+import Btn from "../../component/About_Nav/Btn";
 import '../../styles/Btn.css';
 
 function Play_information_page() {

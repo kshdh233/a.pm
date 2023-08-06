@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Header from '../../component/Header';
-import SearchBar from "../../component/SearchBar";
+import SearchBar from "../../component/About_Search/SearchBar";
 import Carousell from "../../component/Body/Carousel";
 
 function Play_infor_home_page() {

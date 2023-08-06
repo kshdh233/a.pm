@@ -8,9 +8,10 @@ import App from "./App";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 // page 폴더
-import Main_page from "./page/Main_page.js";
+import Main_page from "./page/All_Main_page/Main_page.js";
 import My_page from "./page/My_page.js";
 import Schedule_page from "./page/Schedule_page.js";
+
 import SignIn_page from "./page/Login/SignIn_page.js";
 import SignUp_page from "./page/Login/SignUp_page.js";
 import Semi_login_page from "./page/Login/Semi_login_page.js";
@@ -19,6 +20,7 @@ import Play_information_page from "./page/Performance/Play_information_page.js";
 import Actor_schedule_page from "./page/Performance/Actor_schedule_page.js";
 import Event_page from "./page/Performance/Event_page.js";
 import Venue_information_page from "./page/Performance/Venue_information_page.js";
+
 import ConcertHall_page from "./page/ConcertHall_page";
 import Information from "./page/Information_page";
 import Seeya from "./page/Seeya_page";
@@ -37,6 +39,7 @@ import LG_sig from "./seeya/LG_signature_hall";
 import Tom_1 from "./seeya/Tom_1";
 import Tom_2 from "./seeya/Tom_2";
 import KyemyungArt from "./seeya/KyemyungArt";
+import SearchPage from "./component/About_Search/PickUp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -75,6 +78,8 @@ root.render(
         <Route path={"/Tom_2"} element={<Tom_2 />} />
         <Route path={"/KyemyungArt"} element={<KyemyungArt />} />
         <Route path={"/App"} element={<App />} />
+
+        <Route path={"/SearchPage"} element={<SearchPage/>}/>
       </Route>
     </Routes>
   </BrowserRouter>

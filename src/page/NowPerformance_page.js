@@ -1,6 +1,5 @@
 import "../styles/Logo.css";
-import PerformanceList from "../component/Popular_play";
-import "../styles/Center.css";
+import PerformanceList from "../component/About_Performance/Popular_play";
 
 function NowPerformance() {
   return (
