@@ -1,34 +1,37 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function Btn() {
+function Btn({ navigateToPlay, navigateToSchedule, navigateToEvent, navigateToVenue}) {
   const navigate = useNavigate();
 
-  const navigateToPlay = () => {
-    navigate("/Play_information_page");
+  const handlePlayClick = () => {
+    navigateToPlay(); 
   };
-  const navigateToSchedule = () => {
-    navigate("/Actor_schedule_page");
+
+  const handleScheduleClick = () => {
+    navigateToSchedule(); 
   };
-  const navigateToEvent = () => {
-    navigate("/Event_page");
+
+  const handleEventClick = () => {
+    navigateToEvent(); 
   };
-  const navigateToVenue = () => {
-    navigate("/Venue_information_page");
+
+  const handleVenueClick = () => {
+    navigateToVenue(); 
   };
 
   return (
     <div className="swiper-container">
-      <button className="swiper-slide-btn" onClick={navigateToPlay}>
+      <button className="swiper-slide-btn" onClick={handlePlayClick}>
         공연 정보
       </button>
-      <button className="swiper-slide-btn" onClick={navigateToSchedule}>
+      <button className="swiper-slide-btn" onClick={handleScheduleClick}>
         배우 스케줄
       </button>
-      <button className="swiper-slide-btn" onClick={navigateToEvent}>
+      <button className="swiper-slide-btn" onClick={handleEventClick}>
         이벤트
       </button>
-      <button className="swiper-slide-btn" onClick={navigateToVenue}>
+      <button className="swiper-slide-btn" onClick={handleVenueClick}>
         공연장 정보
       </button>
     </div>
