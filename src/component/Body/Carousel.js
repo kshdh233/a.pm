@@ -17,10 +17,12 @@ const Carousell = () => {
   const handleImageClick = (link) => {
     navigate(link);
   };
+
   const renderSlides = images.map((image, index) => (
     <div key={image.alt} className="flex justify-center items-center" onClick={() => handleImageClick(image.link)}>
+      <img src={image.url} alt={image.alt} />
     </div>
-  ));
+  )); 
 
   return (
     <div className="flex justify-center items-center py-5 px-3">

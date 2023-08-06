@@ -32,7 +32,7 @@ function Signup(props) {
       const response = await fetch('/user/signup', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json', // JSON 형식으로 데이터를 보내는 헤더 설정
         },
         body: JSON.stringify({
           username: ID,
@@ -46,7 +46,7 @@ function Signup(props) {
 
       if (response.status === 200) {
         // 회원가입 성공 시 로그인 페이지로 이동
-        navigate('/Singup_page');
+        navigate('/Signin_page');
       } else {
         // 회원가입 실패 시 에러 메시지를 출력
         alert(data.message);
@@ -79,4 +79,4 @@ function Signup(props) {
   )
 }
 
-export default Signup; 
+export default Signup;
