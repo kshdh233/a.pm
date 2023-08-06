@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-
 function Login(props) {
   const [ID, setID] = useState("");
   const [Password, setPassword] = useState("");
@@ -32,15 +31,21 @@ function Login(props) {
         }),
       });
 
-      // 서버로부터 받은 응답을 JSON 형태로 파싱
-      const data = await response.json();
-
+      // 서버의 응답 상태 코드 확인
       if (response.status === 200) {
         // 로그인 성공 시 홈 페이지로 이동
         navigate('/Main_page');
       } else {
-        // 로그인 실패 시 에러 메시지를 출력
-        alert(data.message);
+        // 서버 응답을 JSON 형태로 파싱하여 오류 메시지 가져오기
+        const data = await response.json();
+
+        if (data && data.message) {
+          // 오류 메시지가 존재하는 경우, 메시지를 출력
+          alert(data.message);
+        } else {
+          // 오류 메시지가 없는 경우, 기본 오류 메시지 출력
+          alert('로그인 실패: 서버에서 응답을 받지 못했습니다.');
+        }
       }
     } catch (error) {
       console.error('Error during login:', error);
