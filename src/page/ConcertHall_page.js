@@ -1,6 +1,6 @@
-import SearchBar from "../../component/Body/SearchBar";
-import TopNav from "../../component/Body/SearchBar";
-import Header from "../../component/Header/Header";
+import SearchBar from "../component/SearchBar";
+import TopNav from "../component/SearchBar";
+import Header from "../component/Header";
 import { Outlet } from "react-router-dom";
 
 function ConcertHall_page() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Signup from '../../component/Login/Signup';
-import Header from '../../component/Header/Header';
+import Header from '../../component/Header';
 
 function SignUp_page() {
   return (

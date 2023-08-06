@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../component/Header/Header';
+import Header from '../component/Header';
 import WishList from '../component/Body/WishList';
 import '../styles/WishList.css';
 

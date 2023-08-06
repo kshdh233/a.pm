@@ -19,16 +19,16 @@ import Play_information_page from "./page/Performance/Play_information_page.js";
 import Actor_schedule_page from "./page/Performance/Actor_schedule_page.js";
 import Event_page from "./page/Performance/Event_page.js";
 import Venue_information_page from "./page/Performance/Venue_information_page.js";
-import ConcertHall_page from "./page/Concert_hall/ConcertHall_page";
-import Information from "./page/Concert_hall/Information_page";
-import Seeya from "./page/Concert_hall/Seeya_page";
-import NowPerformance from "./page/Concert_hall/NowPerformance_page";
-import Location from "./page/Concert_hall/Location_page";
+import ConcertHall_page from "./page/ConcertHall_page";
+import Information from "./page/Information_page";
+import Seeya from "./page/Seeya_page";
+import NowPerformance from "./page/NowPerformance_page";
+import Location from "./page/Location_page";
 import WishList_page from "./page/WishList_page";
 
 // component 폴더
-import Popular_playList from "./component/Body/Popular_play.js";
-import FixedBottomNavigation from "./component/Footer/BottomNav.js";
+import Popular_playList from "./component/Popular_play.js";
+import FixedBottomNavigation from "./component/BottomNav.js";
 import Cjazit from "./seeya/Cjazit";
 import JTN_1 from "./seeya/JTN_1";
 import Ktg from "./seeya/Ktg";

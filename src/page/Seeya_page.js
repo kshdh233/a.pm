@@ -1,6 +1,6 @@
-import "../../styles/Logo.css";
-import Cjazit from "../../seeya/Cjazit";
-import "../../styles/Center.css";
+import "../styles/Logo.css";
+import Cjazit from "../seeya/Cjazit";
+import "../styles/Center.css";
 
 function Seeya() {
   return (

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 // import axios from 'axios';
 import Pagination from "@mui/material/Pagination";
-import "../../styles/Popular_play.css";
+import "../styles/Popular_play.css";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Loopi from "../../img/Loopi.jpg";
-import sponge from "../../img/spongebab.png";
-import ToungE from "../../img/ToungE.webp";
+import Loopi from "../img/Loopi.jpg";
+import sponge from "../img/spongebab.png";
+import ToungE from "../img/ToungE.webp";
 import { Block } from "@mui/icons-material";
 
 const theme = createTheme({

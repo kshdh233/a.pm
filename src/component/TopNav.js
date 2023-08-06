@@ -1,4 +1,4 @@
-import '../../styles/TopNav.css'
+import '../styles/TopNav.css'
 import React from 'react' ;
 import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
