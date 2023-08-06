@@ -21,11 +21,11 @@ import Actor_schedule_page from "./page/Performance/Actor_schedule_page.js";
 import Event_page from "./page/Performance/Event_page.js";
 import Venue_information_page from "./page/Performance/Venue_information_page.js";
 
-import ConcertHall_page from "./page/ConcertHall_page";
-import Information from "./page/Information_page";
-import Seeya from "./page/Seeya_page";
-import NowPerformance from "./page/NowPerformance_page";
-import Location from "./page/Location_page";
+import ConcertHall_page from "./page/All_ConcertHall_page/ConcertHall_page";
+import Information from "./page/All_ConcertHall_page/Information_page";
+import Seeya from "./page/All_ConcertHall_page/Seeya_page";
+import NowPerformance from "./page/All_ConcertHall_page/NowPerformance_page";
+import Location from "./page/All_ConcertHall_page/Location_page";
 import WishList_page from "./page/WishList_page";
 
 // component 폴더

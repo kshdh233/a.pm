@@ -1,5 +1,5 @@
-import "../styles/Logo.css";
-import "../styles/Center.css";
+import "../../styles/Logo.css";
+import "../../styles/Center.css";
 
 function Information() {
   return (
