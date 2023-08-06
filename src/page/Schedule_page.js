@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from "../component/Header";
-import Calender from "../component/Calender";
+import Header from "../component/Header/Header";
+import Calender from "../component/Body/Calender";
 import '../styles/Header.css';
 
 function Schedule_page() {

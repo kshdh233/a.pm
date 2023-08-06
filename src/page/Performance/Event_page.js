@@ -1,6 +1,12 @@
+<<<<<<< HEAD:src/page/Event_page.js
 import Header from "../component/Header";
 import Btn from "../component/About_Nav/Btn";
 import '../styles/Btn.css';
+=======
+import Header from "../../component/Header/Header";
+import Btn from "../../component/Body/Btn";
+import '../../styles/Btn.css';
+>>>>>>> 3ee112b12f75e072c93a248ebf0f628850b39a61:src/page/Performance/Event_page.js
 
 function Event_page() {
   return (

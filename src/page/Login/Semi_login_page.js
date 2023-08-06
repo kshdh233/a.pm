@@ -1,6 +1,6 @@
 import React from 'react';
-import Semi_login from "../component/Semi_login";
-import '../styles/Semi_login.css';
+import Semi_login from "../../component/Login/Semi_login";
+import '../../styles/Semi_login.css';
 
 function Semi_login_page(){
     return(
