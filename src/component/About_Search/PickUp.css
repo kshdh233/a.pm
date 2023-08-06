@@ -1,0 +1,33 @@
+.Sortation_container{
+    display: flex;
+}
+
+.Sortation_item_container{
+    
+    
+
+}
+
+.Sortation_item{
+    width: 100px;
+    display: block;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: rgb(223, 223, 223,0.4);
+    border-right: 1px solid rgb(223,223,223,0.7);
+
+}
+
+.Result_item_container{
+    text-decoration: none;
+}
+
+.Result_item{
+    width: 100px;
+    display: block;
+    height: 60px;
+    text-align: center;
+    text-decoration:none;
+    line-height: 60px;
+}

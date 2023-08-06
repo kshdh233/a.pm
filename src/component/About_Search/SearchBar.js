@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Search } from "@mui/icons-material"; // Google Material Icons의 돋보기 아이콘 임포트
-import "../styles/SearchBar.css";
+import "../../styles/SearchBar.css";
 import { Autocomplete, TextField } from "@mui/material";
 
 const arr = ['1', '2', '3', '4', '5'];

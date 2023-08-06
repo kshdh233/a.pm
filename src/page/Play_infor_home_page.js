@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Header from '../component/Header';
-import SearchBar from "../component/SearchBar";
+import SearchBar from "../component/About_Search/SearchBar";
 import Carousell from "../component/Carousel";
 import { Link } from 'react-router-dom';
 

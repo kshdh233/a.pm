@@ -1,5 +1,5 @@
 import Header from "../component/Header";
-import Btn from "../component/Btn";
+import Btn from "../component/About_Nav/Btn";
 import '../styles/Btn.css';
 
 function Event_page() {

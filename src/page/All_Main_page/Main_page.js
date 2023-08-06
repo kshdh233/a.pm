@@ -1,11 +1,12 @@
-import './Main_page.css';
-import '../styles/Logo.css';
-import SearchBar from "../component/SearchBar";
+import SearchBar from "../../component/About_Search/SearchBar";
 import { Search } from "@mui/icons-material";
-import TopNav from "../component/TopNav";
-import PerformanceList from "../component/Popular_play";
-import '../page_style/main_page.css';
-import Header from "../component/Header";
+import TopNav from "../../component/About_Nav/TopNav";
+import PerformanceList from "../../component/About_Performance/Popular_play";
+import Header from "../../component/Header";
+
+import './Main_page.css';
+import '../../styles/Logo.css';
+
 function Main_page() {
   return (
     <>

@@ -1,22 +1,43 @@
 .Top-menu-container{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    margin: 0 auto;
+  overflow: hidden;
+  overflow-y: hidden; /* 세로 스크롤 숨김 */
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  max-width: 100%; /* 컨테이너의 최대 너비 설정 */
+  white-space: nowrap; /* 버튼들이 한 줄로 표시되도록 설정 */
+  display: flex; /* 컨테이너 내의 요소들을 가로 방향으로 배치 */
 }
 
 .Top-menu-item{
-    font-size: 0.8em;
-    font-weight: bold;
-    background-color: white;
+    height: 2rem;
+  padding: 0.8rem 1rem; /* 버튼 크기 조정 */
+  line-height: normal; /* 버튼 내 텍스트를 버튼 중앙으로 정렬 */
+  border-radius: 1rem;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #616161;
+  white-space: nowrap;
+  margin: 4px;
+  color: black;
 
-    padding: 10px;
-    border: 2px solid black;
-
-    cursor: pointer;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    margin: 10px;
    
 
+}
+
+@media (max-width : 768px){
+    .Top-menu-item{
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+@media (max-width : 480px){
+    .Top-menu-item{
+        font-size: 0.8rem;
+        padding: 0.5rem 0.7rem;
+    }
 }
