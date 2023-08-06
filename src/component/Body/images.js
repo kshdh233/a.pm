@@ -24,9 +24,9 @@ const images = [
   },
 
   {
-    alt: "Extinction_Play_information_page",
+    alt: "image5",
     url: "https://ticketimage.interpark.com/Play/image/large/23/23006725_p.gif",
-    link: '/Sunny_Venue_information_page'
+    link: '/Extinction_Play_information_page'
   },
 ];
 
