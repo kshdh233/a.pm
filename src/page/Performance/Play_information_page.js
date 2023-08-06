@@ -13,12 +13,12 @@ function Play_information_page() {
 
       {/* Main Content */}
       <div style={{ flex: 1 }}>
-        <div>예고 영상</div> 
-        <div>포스터</div>
-        <div>공연 정보</div>
-        <div>공연 기간</div>
-      </div>
-
+        <img src='https://ticketimage.interpark.com/Play/image/etc/23/22007582-13.jpg'
+        style={{ width: '100%', height: 'auto'}} />
+        <br />
+        <img src='https://ticketimage.interpark.com/Play/image/etc/23/22007582-20.jpg'
+        style={{ width: '100%', height: 'auto'}} />
+        </div>
     </div>
   );
 }

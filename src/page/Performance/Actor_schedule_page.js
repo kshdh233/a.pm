@@ -12,7 +12,11 @@ function Actor_schedule_page() {
 
       {/* Main Content */}
       <div style={{ flex: 1 }}>
-        <div>배우 스케줄</div> 
+        <img src='https://ticketimage.interpark.com/Play/image/etc/23/22007582-26.jpg'
+        style={{ width: '100%', height: 'auto'}} />
+        <br />
+        <img src='https://ticketimage.interpark.com/Play/image/etc/23/22007582-28.jpg'
+        style={{ width: '100%', height: 'auto'}} />
       </div>
 
       {/* Footer */}

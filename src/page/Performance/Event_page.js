@@ -12,8 +12,8 @@ function Event_page() {
 
       {/* Main Content */}
       <div style={{ flex: 1 }}>
-        <div>공연 관련 이벤트</div> 
-        <div>재관람 혜택</div>
+        <img src='https://ticketimage.interpark.com/220075822022/07/11/b130a7e1.jpg'
+        style={{ width: '100%', height: 'auto'}} />
       </div>
 
       {/* Footer */}

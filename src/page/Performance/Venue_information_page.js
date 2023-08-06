@@ -12,8 +12,12 @@ function Venue_information_page() {
 
     {/* Main Content */}
     <div style={{ flex: 1 }}>
-      <div>공연장 정보</div> 
-    </div>
+        <img src='https://ticketimage.interpark.com/220075822022/06/15/809a9d59.jpg'
+        style={{ width: '100%', height: 'auto'}} />
+        <br />
+        <img src='https://ticketimage.interpark.com/220075822022/06/15/98871321.jpg'
+        style={{ width: '100%', height: 'auto'}} />
+        </div>
 
   </div>
   );
