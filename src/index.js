@@ -15,11 +15,32 @@ import Schedule_page from "./page/Schedule_page.js";
 import SignIn_page from "./page/Login/SignIn_page.js";
 import SignUp_page from "./page/Login/SignUp_page.js";
 import Semi_login_page from "./page/Login/Semi_login_page.js";
+
 import Play_infor_home_page from "./page/Performance/Play_infor_home_page";
-import Play_information_page from "./page/Performance/Play_information_page.js";
-import Actor_schedule_page from "./page/Performance/Actor_schedule_page.js";
-import Event_page from "./page/Performance/Event_page.js";
-import Venue_information_page from "./page/Performance/Venue_information_page.js";
+import Sunny_Play_information_page from "./page/Performance/Sunnyten/Sunny_Play_information_page.js";
+import Sunny_Actor_schedule_page from "./page/Performance/Sunnyten/Sunny_Actor_schedule_page.js";
+import Sunny_Event_page from "./page/Performance/Sunnyten/Sunny_Event_page.js";
+import Sunny_Venue_information_page from "./page/Performance/Sunnyten/Sunny_Venue_information_page.js";
+
+import Gutenberg_Play_information_page from "./page/Performance/Gutenberg/Gutenberg_Play_information_page.js";
+import Gutenberg_Actor_schedule_page from "./page/Performance/Gutenberg/Gutenberg_Actor_schedule_page.js";
+import Gutenberg_Event_page from "./page/Performance/Gutenberg/Gutenberg_Event_page.js";
+import Gutenberg_Venue_information_page from "./page/Performance/Gutenberg/Gutenberg_Venue_information_page.js";
+
+import Extinction_Play_information_page from "./page/Performance/Extinction/Extinction_Play_information_page.js";
+import Extinction_Actor_schedule_page from "./page/Performance/Extinction/Extinction_Actor_schedule_page.js";
+import Extinction_Event_page from "./page/Performance/Extinction/Extinction_Event_page.js";
+import Extinction_Venue_information_page from "./page/Performance/Extinction/Extinction_Venue_information_page.js";
+
+import Count_Play_information_page from "./page/Performance/Count/Count_Play_information_page.js";
+import Count_Actor_schedule_page from "./page/Performance/Count/Count_Actor_schedule_page.js";
+import Count_Event_page from "./page/Performance/Count/Count_Event_page.js";
+import Count_Venue_information_page from "./page/Performance/Count/Count_Venue_information_page.js";
+
+import The_tale_Play_information_page from "./page/Performance/The_tale/The_tale_Play_information_page.js";
+import The_tale_Actor_schedule_page from "./page/Performance/The_tale/The_tale_Actor_schedule_page.js";
+import The_tale_Event_page from "./page/Performance/The_tale/The_tale_Event_page.js";
+import The_tale_Venue_information_page from "./page/Performance/The_tale/The_tale_Venue_information_page.js";
 
 import ConcertHall_page from "./page/All_ConcertHall_page/ConcertHall_page";
 import Information from "./page/All_ConcertHall_page/Information_page";
@@ -27,6 +48,11 @@ import Seeya from "./page/All_ConcertHall_page/Seeya_page";
 import NowPerformance from "./page/All_ConcertHall_page/NowPerformance_page";
 import Location from "./page/All_ConcertHall_page/Location_page";
 import WishList_page from "./page/WishList_page";
+
+import PmShowList_page from "./page/PmShowList_page";
+import ActorList_page from "./page/ActorList_page";
+import TheaterList_page from "./page/TheaterList_page";
+import Actor_page from "./page/Actor_page";
 
 // component 폴더
 import Popular_playList from "./component/About_Performance/Popular_play";
@@ -57,11 +83,38 @@ root.render(
         <Route path={"/My_page"} element={<My_page />} />
         <Route path={"/WishList_page"} element={<WishList_page />} />
         <Route path={"/Schedule_page"} element={<Schedule_page />} />
+
         <Route path={"/Play_infor_home_page"} element={<Play_infor_home_page />} />
-        <Route path={"/Play_information_page"} element={<Play_information_page />} />
-        <Route path={"/Actor_schedule_page"} element={<Actor_schedule_page />} />
-        <Route path={"/Event_page"} element={<Event_page />} />
-        <Route path={"/Venue_information_page"} element={<Venue_information_page />} />
+        <Route path={"/Sunny_Play_information_page"} element={<Sunny_Play_information_page />} />
+        <Route path={"/Sunny_Actor_schedule_page"} element={<Sunny_Actor_schedule_page />} />
+        <Route path={"/Sunny_Event_page"} element={<Sunny_Event_page />} />
+        <Route path={"/Sunny_Venue_information_page"} element={<Sunny_Venue_information_page />} />
+
+        <Route path={"/Gutenberg_Play_information_page"} element={<Gutenberg_Play_information_page />} />
+        <Route path={"/Gutenberg_Actor_schedule_page"} element={<Gutenberg_Actor_schedule_page />} />
+        <Route path={"/Gutenberg_Event_page"} element={<Gutenberg_Event_page />} />
+        <Route path={"/Gutenberg_Venue_information_page"} element={<Gutenberg_Venue_information_page />} />
+
+        <Route path={"/Extinction_Play_information_page"} element={<Extinction_Play_information_page />} />
+        <Route path={"/Extinction_Actor_schedule_page"} element={<Extinction_Actor_schedule_page />} />
+        <Route path={"/Extinction_Event_page"} element={<Extinction_Event_page />} />
+        <Route path={"/Extinction_Venue_information_page"} element={<Extinction_Venue_information_page />} />
+
+        <Route path={"/Count_Play_information_page"} element={<Count_Play_information_page />} />
+        <Route path={"/Count_Actor_schedule_page"} element={<Count_Actor_schedule_page />} />
+        <Route path={"/Count_Event_page"} element={<Count_Event_page />} />
+        <Route path={"/Count_Venue_information_page"} element={<Count_Venue_information_page />} />
+
+        <Route path={"/The_tale_Play_information_page"} element={<The_tale_Play_information_page />} />
+        <Route path={"/The_tale_Actor_schedule_page"} element={<The_tale_Actor_schedule_page />} />
+        <Route path={"/The_tale_Event_page"} element={<The_tale_Event_page />} />
+        <Route path={"/The_tale_Venue_information_page"} element={<The_tale_Venue_information_page />} />
+
+        <Route path={"/PmShowList_page"} element={<PmShowList_page />} />
+        <Route path={"/ActorList_page"} element={<ActorList_page />} />
+        <Route path={"/TheaterList_page"} element={<TheaterList_page />} />
+        <Route path={"/Actor_page"} element={<Actor_page />} />
+
         <Route path={"/ConcertHall_page"} element={<ConcertHall_page />}>
           <Route path={"Information_page"} element={<Information />} />
           <Route path={"Location_page"} element={<Location />} />
