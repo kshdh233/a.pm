@@ -1,3 +1,71 @@
+
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./PickUp.css";
+import { Link } from "react-router-dom";
+
+const SearchPage = () => {
+  const [theaterList, setTheaterList] = useState([]);
+  const [selectedInitial, setSelectedInitial] = useState("");
+  const initialList = ["A", "ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"];
+
+  useEffect(() => {
+    const fetchDataFromServer = async () => {
+      try {
+        // 백엔드의 API 엔드포인트로 요청을 보내서 극장 정보를 가져옵니다.
+        const response = await axios.get("/theater/list?page=0");
+        const theaterData = response.data;
+        setTheaterList(theaterData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchDataFromServer();
+  }, []);
+
+  const handleInitialClick = (initial) => {
+    setSelectedInitial(initial);
+  };
+
+  const filteredTheaters = theaterList.filter((theater) =>
+    selectedInitial ? theater.initial === selectedInitial : true
+  );
+
+  return (
+    <div>
+      <div className="Sortation_container">
+        <div className="Sortation_item_container">
+          {initialList.map((initial) => (
+            <div
+              className={`Sortation_item ${selectedInitial === initial ? "active" : ""}`}
+              key={initial}
+              onClick={() => handleInitialClick(initial)}
+            >
+              {initial}
+            </div>
+          ))}
+        </div>
+
+        <div className="Result_item_container">
+          {filteredTheaters.map((theater) => (
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to={`/theater/${encodeURIComponent(theater.name)}`} // 클릭 시 극장 정보 페이지로 이동
+              key={theater.name}
+            >
+              <div className="Result_item">{theater.name}</div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SearchPage;
+
+/*
 import React, { useState, useEffect } from "react";
 import './PickUp.css';
 import {Link} from "react-router-dom"
@@ -67,3 +135,4 @@ const SearchPage = () => {
 };
 
 export default SearchPage;
+*/
