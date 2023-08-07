@@ -10,7 +10,8 @@ function ConcertHall_page() {
   return (
     <>
       <Header />
-      <SearchBar />-
+      <SearchBar />
+      <TopNav/>
       <SearchPage/>
 
       <Outlet />

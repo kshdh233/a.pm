@@ -119,6 +119,7 @@ root.render(
         
      
         <Route path={"/ConcertHall_page"} element={<ConcertHall_page />}>
+          <Route path={"Infomation_page"} element={<Information/>}/>
           <Route path={"Location_page"} element={<Location />} />
           <Route path={"Seeya_page"} element={<Seeya />} />
           <Route path={"NowPerformance_page"} element={<NowPerformance />} />
