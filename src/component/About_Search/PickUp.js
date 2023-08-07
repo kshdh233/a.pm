@@ -12,7 +12,7 @@ const SearchPage = () => {
     const fetchDataFromServer = async () => {
       try {
         // 백엔드의 API 엔드포인트로 요청을 보내서 모든 극장 정보를 가져옵니다.
-        const response = await axios.get("/theater/list?page=4");
+        const response = await axios.get("/theater/list");
         const theaterData = response.data;
         setTheaterList(theaterData);
         console.log(theaterData);
