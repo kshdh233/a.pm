@@ -24,10 +24,11 @@
 }
 
 .Result_item{
-    width: 100px;
+    width: 100%;
     display: block;
-    height: 60px;
+    height: auto;
     text-align: center;
     text-decoration:none;
     line-height: 60px;
+    white-space: normal;
 }

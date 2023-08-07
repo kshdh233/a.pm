@@ -52,6 +52,7 @@ import WishList_page from "./page/WishList_page";
 import PmShowList_page from "./page/PmShowList_page";
 import ActorList_page from "./page/ActorList_page";
 import TheaterList_page from "./page/TheaterList_page";
+import TheaterList from "./component/TheaterList";
 import Actor_page from "./page/Actor_page";
 
 // component 폴더
@@ -66,15 +67,14 @@ import Tom_1 from "./seeya/Tom_1";
 import Tom_2 from "./seeya/Tom_2";
 import KyemyungArt from "./seeya/KyemyungArt";
 import SearchPage from "./component/About_Search/PickUp";
-import TheaterList from "./component/theater";
-import TheaterPage from "./page/Theater_page";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<FixedBottomNavigation />}>
-        <Route path={"/TheaterPage"} element={<TheaterPage/>}/>
+        
         <Route path={"/"} element={<Main_page />} />
         <Route path={"/Main_page"} element={<Main_page />} />
         {/* <Route path={"/SearchBar"} element={<SearchBar />} /> */}
