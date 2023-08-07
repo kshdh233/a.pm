@@ -6,15 +6,16 @@ import Header from "../../component/About_Logo/Header";
 import { Outlet } from "react-router-dom";
 import SearchPage from "../../component/About_Search/PickUp";
 
-function ConcertHall_page() {
+function First_ConcertHall_page() {
   return (
     <>
       <Header />
-      <SearchBar />-
+      <SearchBar />
+
       <SearchPage/>
 
-      <Outlet />
+     
     </>
   );
 }
-export default ConcertHall_page;
+export default First_ConcertHall_page;

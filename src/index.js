@@ -42,6 +42,7 @@ import The_tale_Actor_schedule_page from "./page/Performance/The_tale/The_tale_A
 import The_tale_Event_page from "./page/Performance/The_tale/The_tale_Event_page.js";
 import The_tale_Venue_information_page from "./page/Performance/The_tale/The_tale_Venue_information_page.js";
 
+import First_ConcertHall_page from "./page/All_ConcertHall_page/First_ConcertHall_page";
 import ConcertHall_page from "./page/All_ConcertHall_page/ConcertHall_page";
 import Information from "./page/All_ConcertHall_page/Information_page";
 import Seeya from "./page/All_ConcertHall_page/Seeya_page";
@@ -54,6 +55,7 @@ import ActorList_page from "./page/ActorList_page";
 import TheaterList_page from "./page/TheaterList_page";
 import TheaterList from "./component/TheaterList";
 import Actor_page from "./page/Actor_page";
+
 
 // component 폴더
 import Popular_playList from "./component/About_Performance/Popular_play";
@@ -114,13 +116,15 @@ root.render(
         <Route path={"/ActorList_page"} element={<ActorList_page />} />
         <Route path={"/TheaterList_page"} element={<TheaterList_page />} />
         <Route path={"/Actor_page"} element={<Actor_page />} />
-
+        
+     
         <Route path={"/ConcertHall_page"} element={<ConcertHall_page />}>
-          <Route path={"Information_page"} element={<Information />} />
           <Route path={"Location_page"} element={<Location />} />
           <Route path={"Seeya_page"} element={<Seeya />} />
           <Route path={"NowPerformance_page"} element={<NowPerformance />} />
         </Route>
+   
+
         <Route path={"/SignIn_page"} element={<SignIn_page />} />
         <Route path={"/SignUp_page"} element={<SignUp_page />} />
         <Route path={"/Semi_login_page"} element={<Semi_login_page />} />

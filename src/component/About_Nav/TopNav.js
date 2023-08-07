@@ -7,9 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function TopNav(){
   const navigate = useNavigate();
 
-  const navigateToInfo = ()=>{
-    navigate("/ConcertHall_page/Information_page");
-  }
+ 
 
   const navigateToLoca = ()=>{
     navigate("/ConcertHall_page/Location_page");
@@ -23,7 +21,6 @@ function TopNav(){
     return(
      
         <div className="Top-menu-container">
-          <button onClick={navigateToInfo} className="Top-menu-item">공연장 정보</button>
 
           <button onClick={navigateToLoca}className="Top-menu-item" >주소,화장실</button>
            

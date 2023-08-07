@@ -1,43 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import TheaterDetail from './TheaterDetail';
 
 const TheaterList = () => {
   const [theaterList, setTheaterList] = useState([]);
-  const [selectedTheaterId, setSelectedTheaterId] = useState(null);
 
   useEffect(() => {
-    loadTheaterList();
+    const fetchTheaters = async () => {
+      try {
+        const response = await axios.get('/theater/list');
+
+        const seoulTheaters = response.data.filter(theater => theater.theaterLocation.includes('서울'));
+        
+        setTheaterList(seoulTheaters);
+      } catch (error) {
+        console.error('Error fetching theaters:', error);
+      }
+    };
+
+    // 함수 호출
+    fetchTheaters();
   }, []);
-
-  const loadTheaterList = async () => {
-    try {
-      const response = await axios.get('/theater/list');
-      setTheaterList(response.data);
-    } catch (error) {
-      console.error('Error loading theater list:', error);
-    }
-  };
-
-  const handleTheaterClick = (theaterId) => {
-    setSelectedTheaterId((prevSelectedId) => (prevSelectedId === theaterId ? null : theaterId));
-  };
 
   return (
     <div>
-      <h1>극장 목록</h1>
+      <h2>서울 지역 극장 목록</h2>
       <ul>
-        {theaterList.map((theater) => (
-          <li
-            key={theater.theaterId}
-            onClick={() => handleTheaterClick(theater.theaterId)}
-            style={{ cursor: 'pointer' }}
-          >
-            {theater.theaterName}
+        {theaterList.map(theater => (
+          <li key={theater.theaterId}>
+            <p>극장명: {theater.theaterName}</p>
+            <p>극장 위치: {theater.theaterLocation}</p>
+            {/* 여기에 필요한 정보를 추가로 표시하거나 수정 가능 */}
           </li>
         ))}
       </ul>
-      {selectedTheaterId && <TheaterDetail theaterId={selectedTheaterId} />}
     </div>
   );
 };

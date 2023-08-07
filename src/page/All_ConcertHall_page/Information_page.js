@@ -5,9 +5,6 @@ import { useEffect } from "react";
 
 function Information() {
 
- const fetchData = fetch('/theater/list');
- console.log(fetchData);
-
 
   return (
     <>
