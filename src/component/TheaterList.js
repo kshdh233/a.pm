@@ -5,13 +5,14 @@ const TheaterList = () => {
   const [theaterList, setTheaterList] = useState([]);
 
   useEffect(() => {
+    // 서버에서 데이터 가져오는 함수 정의
     const fetchTheaters = async () => {
       try {
+        // Axios를 이용하여 서버에서 극장 목록 가져오기
         const response = await axios.get('/theater/list');
 
-        const seoulTheaters = response.data.filter(theater => theater.theaterLocation.includes('서울'));
-        
-        setTheaterList(seoulTheaters);
+        // 서버에서 받아온 데이터 중에서 서울 지역인 극장만 필터링하여 React 상태에 저장
+        setTheaterList(response.data);
       } catch (error) {
         console.error('Error fetching theaters:', error);
       }
@@ -20,7 +21,7 @@ const TheaterList = () => {
     // 함수 호출
     fetchTheaters();
   }, []);
-
+  
   return (
     <div>
       <h2>서울 지역 극장 목록</h2>
