@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react"
-import Header from './component/About_Logo/Header'
-import Btn from "./component/About_Nav/Btn";
+import My_info from "./component/Login/My_info";
 import './styles/Btn.css';
 
 const App = () => {
   return(
     <>
-    <Header />
-    <Btn />
+    <My_info />
     </>
   )
 }

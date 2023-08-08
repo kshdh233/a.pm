@@ -9,12 +9,11 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 // page 폴더
 import Main_page from "./page/All_Main_page/Main_page.js";
-import My_page from "./page/My_page.js";
+import My_page from "./page//My_page/My_page.js";
+import My_info_page from "./page//My_page/My_info_page.js";
 import Schedule_page from "./page/Schedule_page.js";
 
-import SignIn_page from "./page/Login/SignIn_page.js";
 import SignUp_page from "./page/Login/SignUp_page.js";
-import Semi_login_page from "./page/Login/Semi_login_page.js";
 
 import Play_infor_home_page from "./page/Performance/Play_infor_home_page";
 import Sunny_Play_information_page from "./page/Performance/Sunnyten/Sunny_Play_information_page.js";
@@ -81,6 +80,7 @@ root.render(
         {/* <Route path={"/Pagination"} element={<PaginationSize />} /> */}
         <Route path={"/Popular_play"} element={<Popular_playList />} />
         <Route path={"/My_page"} element={<My_page />} />
+        <Route path={"/My_info_page"} element={<My_info_page />} />
         <Route path={"/WishList_page"} element={<WishList_page />} />
         <Route path={"/Schedule_page"} element={<Schedule_page />} />
 
@@ -121,9 +121,7 @@ root.render(
           <Route path={"Seeya_page"} element={<Seeya />} />
           <Route path={"NowPerformance_page"} element={<NowPerformance />} />
         </Route>
-        <Route path={"/SignIn_page"} element={<SignIn_page />} />
         <Route path={"/SignUp_page"} element={<SignUp_page />} />
-        <Route path={"/Semi_login_page"} element={<Semi_login_page />} />
 
         <Route path={"/Cjazit"} element={<Cjazit />} />
         <Route path={"/JTN_1"} element={<JTN_1 />} />
