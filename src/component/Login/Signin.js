@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/Signin.css';
+import My_info_page from '../../page/My_page/My_info_page';
 
 function Signin(props) {
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [Password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true'); // 로그인 상태 초기화
   const navigate = useNavigate();
 
   const onUsernameHandler = (event) => {
@@ -15,27 +17,33 @@ function Signin(props) {
     setPassword(event.target.value);
   }
 
+  const handleLogout = () => {
+    localStorage.setItem('isLoggedIn', 'false'); // 로그아웃 시 로그인 상태 제거
+    setIsLoggedIn(false);
+  };
+
   const onSubmitHandler = async (event) => {
     event.preventDefault();
 
     try {
       // 서버로 로그인 정보를 전송하는 API 호출
       const response = await fetch('/user/login', {
-        method: 'POST',
+        method: 'POST',  // 요청 메서드를 POST로 지정
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           username: username,
-          password: password,
+          password: Password,
         }),
       });
+
       console.log(response)
       // 서버의 응답 상태 코드 확인
       if (response.status === 200) {
-        console.log(response.status)
-        // 로그인 성공 시 홈 페이지로 이동
-        navigate('/Main_page');
+        localStorage.setItem('isLoggedIn', 'true');
+        setIsLoggedIn(true);
+        //navigate('/Main_page');
       } else if (response.status === 401) {
         // 로그인 실패 시 서버 응답을 JSON 형태로 파싱하여 오류 메시지 가져오기
         const data = await response.json();
@@ -58,24 +66,27 @@ function Signin(props) {
     }
   };
 
-  return (
-    <div className="login-container">
-  <form className="login-form" onSubmit={onSubmitHandler}>
-    <div className="input-group">
-      <input type="text" value={username} onChange={onUsernameHandler} placeholder="아이디" />
-    </div>
+  if (isLoggedIn) {
+    return <My_info_page username={username} handleLogout={handleLogout} />;
+  } else {
+        return (
+          <div className="login-container">
+            <form className="login-form" onSubmit={onSubmitHandler}>
+              <div className="input-group">
+                <input type="text" value={username} onChange={onUsernameHandler}  placeholder="아이디" />
+              </div>
 
-    <div className="password-group">
-      <input type="password" value={password} onChange={onPasswordHandler} placeholder="비밀번호" />
-    </div>
+              <div className="password-group">
+                <input type="password" value={Password} onChange={onPasswordHandler}      placeholder="비밀번호" />
+              </div>
 
-    <div className="button-group">
-      <Link to="/signup_page" className="signup-link">회원가입 {'>'}</Link>
-      <button type="submit">로그인</button>
-      </div>
-  </form>
-</div>
-  )
-}
-
+              <div className="button-group">
+                <Link to="/signup_page" className="signup-link">회원가입 {'>'}</Link>
+                <button type="submit">로그인</button>
+              </div>
+            </form>
+          </div>
+        )
+      }
+    }
 export default Signin;

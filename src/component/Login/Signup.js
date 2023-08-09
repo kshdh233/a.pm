@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import '../../styles/Signup.css';
 
 function Signup(props) {
-  const [ID, setID] = useState("");
+  const [username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
   const [ConfirmPassword, setConfirmPassword] = useState("");
 
   const navigate = useNavigate();
 
-  const onIDHandler = (event) => {
-    setID(event.currentTarget.value);
+  const onUsernameHandler = (event) => {
+    setUsername(event.currentTarget.value);
   }
 
   const onPasswordHandler = (event) => {
@@ -35,7 +36,7 @@ function Signup(props) {
           'Content-Type': 'application/json', // JSON 형식으로 데이터를 보내는 헤더 설정
         },
         body: JSON.stringify({
-          username: ID,
+          username: username,
           password1: Password,
           password2: ConfirmPassword,
         }),
@@ -46,7 +47,7 @@ function Signup(props) {
 
       if (response.status === 200) {
         // 회원가입 성공 시 로그인 페이지로 이동
-        navigate('/Signin_page');
+        navigate('/My_page');
       } else {
         // 회원가입 실패 시 에러 메시지를 출력
         alert(data.message);
@@ -58,23 +59,26 @@ function Signup(props) {
   };
 
   return (
-    <div style={{
-      display: 'flex', justifyContent: 'center', alignItems: 'center',
-      width: '100%', height: '400px'
-    }}>
-      <form style={{ display: 'flex', flexDirection: 'column' }} onSubmit={onSubmitHandler}>
-        <label>ID</label>
-        <input type='text' value={ID} onChange={onIDHandler} />
+    <div className="signup-container">
+    <form className="signup-form" onSubmit={onSubmitHandler}>
+      <div className="input-group">
+      <input type="text" value={username} onChange={onUsernameHandler}  placeholder="아이디" />
+      </div>
 
-        <label>비밀번호</label>
-        <input type='password' value={Password} onChange={onPasswordHandler} />
-        <label>비밀번호 확인</label>
-        <input type='password' value={ConfirmPassword} onChange={onConfirmPasswordHandler} />
+      <div className="input-group">
+        <input type="password" value={Password} onChange={onPasswordHandler}      placeholder="비밀번호" />
+      </div>
+
+      <div className="input-group">
+        <input type='password' value={ConfirmPassword} onChange={onConfirmPasswordHandler} placeholder="비밀번호 확인"/>
+      </div>
         <br />
-        <button type='submit'>
-          회원가입
-        </button>
+        <div className='button-group'>
+          <Link to="/My_page" className="signup-link">로그인 {'>'}</Link>
+          <button type='submit'>회원가입</button>
+        </div>
       </form>
+      <div className="bottom-space"></div> {/* 여백을 추가하는 요소 */}
     </div>
   )
 }

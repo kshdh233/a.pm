@@ -1,16 +1,15 @@
 import React from 'react';
-import Header from "../../component/About_Logo/Header";
-import MyInfo from '../../component/Login/My_info';
+import My_Info from '../../component/Login/My_info';
 import Schedule from '../../component/Body/Schedule';
 import '../../styles/Login.css';
 import '../../styles/Schedule.css';
 
-function My_info_page(){
+function My_info_page({ handleLogout }) {
     return(
         <div>
-        <Header />
-        <MyInfo />
-        <Schedule />    
+            <My_Info />
+            <Schedule />
+            <button onClick={handleLogout}>로그아웃</button> 
         </div>
     )
 }
