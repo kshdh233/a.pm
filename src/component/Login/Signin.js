@@ -43,7 +43,7 @@ function Signin(props) {
       if (response.status === 200) {
         localStorage.setItem('isLoggedIn', 'true');
         setIsLoggedIn(true);
-        //navigate('/Main_page');
+        navigate('/Main_page');
       } else if (response.status === 401) {
         // 로그인 실패 시 서버 응답을 JSON 형태로 파싱하여 오류 메시지 가져오기
         const data = await response.json();
