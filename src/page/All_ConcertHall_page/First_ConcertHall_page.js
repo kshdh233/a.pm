@@ -11,9 +11,10 @@ function First_ConcertHall_page() {
     <>
       <Header />
       <SearchBar />
+      <TopNav/>
 
-      <SearchPage/>
-
+      
+      <Outlet />
      
     </>
   );

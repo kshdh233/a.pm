@@ -4,19 +4,22 @@ import "./PickUp.css";
 import { Link } from "react-router-dom";
 
 const SearchPage = () => {
-  const [displayedTheaters, setDisplayedTheaters] = useState([]);
   const [theaterList, setTheaterList] = useState([]);
   const [selectedInitial, setSelectedInitial] = useState("");
-  const initialList = [ "ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"];
+  const initialList = ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ", "ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ"];
 
   useEffect(() => {
     const fetchDataFromServer = async () => {
       try {
-        const response = await axios.get("/theater/list");
-        const theaterData = response.data;
-        const sortedTheaterData = theaterData.sort((a, b) => a.theaterName.localeCompare(b.theaterName));
-        setTheaterList(sortedTheaterData);
-        setDisplayedTheaters(sortedTheaterData);
+        const response = await axios.get("/theater/list/seoul?page=7");
+        const theaterData = response.data.content; // content 배열을 사용합니다.
+        console.log(theaterData);
+        if (!Array.isArray(theaterData) || theaterData.length === 0) {
+          console.error("Invalid theater data:", theaterData);
+          // 적절한 오류 처리를 추가하세요 (예: 사용자에게 오류 메시지 표시)
+          return;
+        }
+        setTheaterList(theaterData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -27,12 +30,9 @@ const SearchPage = () => {
 
   const handleInitialClick = (initial) => {
     if (initial === selectedInitial) {
-      setSelectedInitial(""); // 이미 선택된 자음 구분자를 다시 클릭한 경우, 모든 극장을 보여줍니다.
-      setDisplayedTheaters(theaterList);
+      setSelectedInitial("");
     } else {
-      setSelectedInitial(initial); // 선택된 자음 구분자에 해당하는 극장들만 필터링해서 보여줍니다.
-      const filteredTheaters = filterTheatersByInitial(initial);
-      setDisplayedTheaters(filteredTheaters);
+      setSelectedInitial(initial);
     }
   };
 
@@ -70,13 +70,13 @@ const SearchPage = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="Result_item_container">
           {selectedInitial
             ? filterTheatersByInitial(selectedInitial).map((theater) => (
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
-                  to={`/theater/${encodeURIComponent(theater.theaterName)}`}
+                  to={`/theater/${encodeURIComponent(theater.theaterId)}`}
                   key={theater.theaterId}
                 >
                   <div className="Result_item">{theater.theaterName}</div>
@@ -85,9 +85,9 @@ const SearchPage = () => {
             : theaterList.map((theater) => (
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
-                  to={`/theater/${encodeURIComponent(theater.theaterName)}`}
+                  to={`/theater/${encodeURIComponent(theater.theaterId)}`}
                   key={theater.theaterId}
-                >
+                > 
                   <div className="Result_item">{theater.theaterName}</div>
                 </Link>
               ))}

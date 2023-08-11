@@ -7,5 +7,6 @@ module.exports = function(app) {
       target: 'https://apm-backend-a20e349efc23.herokuapp.com/',
       changeOrigin: true,
     })
+    
   );
 };
