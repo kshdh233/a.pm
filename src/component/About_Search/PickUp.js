@@ -11,15 +11,10 @@ const SearchPage = () => {
   useEffect(() => {
     const fetchDataFromServer = async () => {
       try {
-        const response = await axios.get("/theater/list/seoul?page=7");
+        const response = await axios.get("/theater/list/seoul");
         const theaterData = response.data.content; // content 배열을 사용합니다.
-        console.log(theaterData);
-        if (!Array.isArray(theaterData) || theaterData.length === 0) {
-          console.error("Invalid theater data:", theaterData);
-          // 적절한 오류 처리를 추가하세요 (예: 사용자에게 오류 메시지 표시)
-          return;
-        }
         setTheaterList(theaterData);
+        console.log(theaterData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
