@@ -79,6 +79,7 @@ const ActorList = () => {
           key={i}
           onClick={() => setCurrentPage(i)}
           disabled={i === currentPage}
+          style={paginationButtonStyle}
         >
           {i + 1}
         </button>
@@ -152,6 +153,13 @@ const paginationContainerStyle = {
   display: 'flex',
   justifyContent: 'center',
   marginTop: '20px',
+};
+
+const paginationButtonStyle = {
+  fontSize: '12px', // 페이지네이션 버튼 글자 크기 조정
+  marginLeft: '3px',
+  marginRight: '3px',
+  cursor: 'pointer',
 };
 
 const listStyle = {
