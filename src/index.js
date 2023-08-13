@@ -68,6 +68,8 @@ import Tom_1 from "./seeya/Tom_1";
 import Tom_2 from "./seeya/Tom_2";
 import KyemyungArt from "./seeya/KyemyungArt";
 import SearchPage from "./component/About_Search/PickUp";
+import ActorList from "./component/ActorList";
+import ActorDetail from "./component/ActorDetail";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -138,6 +140,10 @@ root.render(
 
         <Route path={"/SearchPage"} element={<SearchPage/>}/>
       </Route>
+      
+        <Route path="/ActorList" element={<ActorList />} /> {/* 배우 목록 페이지 */}
+        <Route path="/actor/:actorId" element={<ActorDetail />} /> {/* 배우 상세 정보 페이지 */}
+      
     </Routes>
   </BrowserRouter>
 );
