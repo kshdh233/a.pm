@@ -69,13 +69,21 @@ import Tom_2 from "./seeya/Tom_2";
 import KyemyungArt from "./seeya/KyemyungArt";
 import SearchPage from "./component/About_Search/PickUp";
 
+//seeya 폴더
+import Jayu from "./seeya/Jayu";
+import Test from "./seeya/test";
+
+//component - test
+import SeatMap from "./component/Seat_test"; 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<FixedBottomNavigation />}>
-        
+        <Route path={"/seatmap"} element={<SeatMap/>}/>
+        <Route path={"/jayu"} element={<Jayu/>}/>
+        <Route path={"/test"} element={<Test/>}/>
         <Route path={"/"} element={<Main_page />} />
         <Route path={"/Main_page"} element={<Main_page />} />
         {/* <Route path={"/SearchBar"} element={<SearchBar />} /> */}
