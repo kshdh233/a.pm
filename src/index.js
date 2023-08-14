@@ -41,13 +41,15 @@ import The_tale_Actor_schedule_page from "./page/Performance/The_tale/The_tale_A
 import The_tale_Event_page from "./page/Performance/The_tale/The_tale_Event_page.js";
 import The_tale_Venue_information_page from "./page/Performance/The_tale/The_tale_Venue_information_page.js";
 
-import First_ConcertHall_page from "./page/All_ConcertHall_page/First_ConcertHall_page";
+
 import ConcertHall_page from "./page/All_ConcertHall_page/ConcertHall_page";
 import Information from "./page/All_ConcertHall_page/Information_page";
 import Seeya from "./page/All_ConcertHall_page/Seeya_page";
 import NowPerformance from "./page/All_ConcertHall_page/NowPerformance_page";
 import Location from "./page/All_ConcertHall_page/Location_page";
 import WishList_page from "./page/WishList_page";
+import TheaterPage from "./page/All_ConcertHall_page/TheaterPage";
+
 
 import PmShowList_page from "./page/PmShowList_page";
 import ActorList_page from "./page/ActorList_page";
@@ -77,12 +79,17 @@ import Test from "./seeya/test";
 
 //component - test
 import SeatMap from "./component/Seat_test"; 
+import ConcertHall_SearchBar from "./component/About_Search/ConcertHall_SearchBar";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<FixedBottomNavigation />}>
+        <Route path={"/C_H_Search"} element={
+          <ConcertHall_SearchBar/>} />
+        
         <Route path={"/seatmap"} element={<SeatMap/>}/>
         <Route path={"/jayu"} element={<Jayu/>}/>
         <Route path={"/test"} element={<Test/>}/>
@@ -127,13 +134,15 @@ root.render(
         <Route path={"/TheaterList_page"} element={<TheaterList_page />} />
         <Route path={"/Actor_page"} element={<Actor_page />} />
         
-     
-        <Route path={"/ConcertHall_page"} element={<ConcertHall_page />}>
+        <Route path="/ConcertHall_page" element={<ConcertHall_page/>}/>
+        
+        <Route path="/theater/:theaterId" element={<TheaterPage/>} >
           <Route path={"Infomation_page"} element={<Information/>}/>
           <Route path={"Location_page"} element={<Location />} />
           <Route path={"Seeya_page"} element={<Seeya />} />
           <Route path={"NowPerformance_page"} element={<NowPerformance />} />
         </Route>
+
         <Route path={"/SignUp_page"} element={<SignUp_page />} />
 
         <Route path={"/Cjazit"} element={<Cjazit />} />

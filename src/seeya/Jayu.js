@@ -16,8 +16,9 @@ function Jayu() {
         // 서버로부터 좌석 정보를 가져오는 함수
         const fetchSeats = async () => {
           try {
-            const response = await axios.get('/api/seat/list/theaterId'); // theaterId에 실제 극장 ID 사용
+            const response = await axios.get('/seat/list/101'); // theaterId에 실제 극장 ID 사용
             setSeats(response.data); // 서버에서 받아온 좌석 정보를 상태에 설정
+            console.log(response.data);
           } catch (error) {
             console.error('Error fetching seats:', error);
           }
