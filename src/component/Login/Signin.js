@@ -42,6 +42,7 @@ function Signin(props) {
       // 서버의 응답 상태 코드 확인
       if (response.status === 200) {
         localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('username', username);
         setIsLoggedIn(true);
         navigate('/Main_page');
       } else if (response.status === 401) {
@@ -67,7 +68,7 @@ function Signin(props) {
   };
 
   if (isLoggedIn) {
-    return <My_info_page username={username} handleLogout={handleLogout} />;
+    return <My_info_page isLoggedIn={isLoggedIn} username={username} handleLogout={handleLogout} />;
   } else {
         return (
           <div className="login-container">

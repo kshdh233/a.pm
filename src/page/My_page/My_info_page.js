@@ -9,7 +9,11 @@ function My_info_page({ handleLogout }) {
         <div>
             <My_Info />
             <Schedule />
-            <button onClick={handleLogout}>로그아웃</button> 
+            <div className="logout-button-container">
+                <button className='logout-button' onClick={handleLogout}>
+                    로그아웃 
+                </button>
+            </div> 
         </div>
     )
 }

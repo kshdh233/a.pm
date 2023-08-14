@@ -17,3 +17,15 @@
   color: #432baf;
   text-decoration: none;
 }
+
+.logout-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.logout-button {
+  background-color: white; 
+  border: none; 
+  color: gray;
+}

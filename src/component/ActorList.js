@@ -16,7 +16,7 @@ const ActorList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/actor/list'); 
+        const response = await axios.get('/actor/list/pm'); 
         setActorList(response.data);
         setTotalPages(Math.ceil(response.data.length / itemsPerPage));
         setLoading(false);
