@@ -12,7 +12,7 @@ const Actor = () => {
 
   const loadActorList = async () => {
     try {
-      const response = await axios.get('/actor/list');
+      const response = await axios.get('/actor/list/pm');
       setActorList(response.data.content);
     } catch (error) {
       console.error('Error loading actor list:', error);

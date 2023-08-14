@@ -6,13 +6,20 @@ function My_Info(props) {
     username: '',
     avatarUrl: '//yaimg.yanolja.com/joy/sunny/static/images/my/img-my-profile-50.svg'
   });
-  console.log(props.username)
+
   useEffect(() => {
+    // localStorage에서 저장된 아이디 가져오기
+    const savedUsername = localStorage.getItem('username');
+    
+    // localStorage에 아이디가 저장되어 있다면 사용하고, 없으면 기본값 사용
+    const usernameToDisplay = savedUsername ? savedUsername : '게스트';
+    
+    // 사용자 이름 설정
     setUserInfo({
-      username: props.username + ' 님 환영합니다',
+      username: usernameToDisplay + ' 님 환영합니다',
       avatarUrl: '//yaimg.yanolja.com/joy/sunny/static/images/my/img-my-profile-50.svg'
     });
-  }, [props.username]);
+  }, []);
 
   return (
     <>

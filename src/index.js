@@ -70,8 +70,12 @@ import Tom_1 from "./seeya/Tom_1";
 import Tom_2 from "./seeya/Tom_2";
 import KyemyungArt from "./seeya/KyemyungArt";
 import SearchPage from "./component/About_Search/PickUp";
+
 import ActorList from "./component/ActorList";
 import ActorDetail from "./component/ActorDetail";
+
+import PmShowList from "./component/PmShowList";
+import PmShowDetail from "./component/PmShowDetail";
 
 //seeya 폴더
 import Jayu from "./seeya/Jayu";
@@ -158,9 +162,11 @@ root.render(
         <Route path={"/SearchPage"} element={<SearchPage/>}/>
       </Route>
       
-        <Route path="/ActorList" element={<ActorList />} /> {/* 배우 목록 페이지 */}
-        <Route path="/actor/:actorId" element={<ActorDetail />} /> {/* 배우 상세 정보 페이지 */}
-      
+        <Route path="/ActorList" element={<ActorList />} />
+        <Route path="/actor/:actorId" element={<ActorDetail />} /> 
+
+        <Route path="/" element={<PmShowList />} /> 
+        <Route path="/pmshow/:pmShowId" element={<PmShowDetail />} /> 
     </Routes>
   </BrowserRouter>
 );
