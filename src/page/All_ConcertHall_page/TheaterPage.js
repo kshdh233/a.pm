@@ -63,6 +63,7 @@ const TheaterPage = () => {
             <h2>{performance.title}</h2>
             <img src={performance.poster} alt={performance.title} />
             {/* 추가적인 공연 정보 표시 */}
+            <h3>{performance.synopsis}</h3>
           </div>
         ))}
       </div>
