@@ -14,7 +14,16 @@ const ActorDetail = () => {
     const fetchActorDetail = async () => {
       try {
         const response = await axios.get(`/actor/${actorId}`);
-        setActor(response.data); // 서버에서 가져온 배우 정보를 상태로 설정
+        setActor(response.data);
+      } catch (error) {
+        console.error('배우 상세 정보 불러오기 에러:', error);
+      }
+    };
+
+    const fetchActorSchedule = async () => {
+      try {
+        const response = await axios.get(`/schedule/actor/${actorId}`);
+        setSchedule(response.data);
       } catch (error) {
         console.error('배우 스케줄 불러오기 에러:', error);
       }
@@ -109,20 +118,19 @@ const ActorDetail = () => {
           <strong>최근 출연 작품3:</strong> {actor.actorRecentPlay3}
         </p>
       </div>
-      
     </div>
-    <div style={scheduleContainerStyle}>
-      <h3>배우 스케줄</h3>
-      <ul>
-        {schedule.map((item, index) => (
-          <li key={index} style={scheduleItemStyle}>
-            <p style={scheduleTitleStyle}>공연: {item.pmShowTitle}</p>
-            <p>요일: {item.dayOfWeek}</p>
-            <p>날짜: {item.reDate}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <div style={scheduleContainerStyle}> {/* 수정된 부분 */}
+    <h3>배우 스케줄</h3>
+    <ul>
+      {schedule.map((item, index) => (
+        <li key={index} style={scheduleItemStyle}>
+          <p style={scheduleTitleStyle}>공연: {item.pmShowTitle}</p>
+          <p>요일: {item.dayOfWeek}</p>
+          <p>날짜: {item.reDate}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
   </>
   );
 };
