@@ -51,7 +51,7 @@ const ActorList = () => {
   
       // 서버에 좋아요 업데이트 요청 보내기
       const response = await axios.post(`/user/likeActor/${actorId}`, {}, config);
-  
+      
       // 서버 응답 확인
       if (response.status === 200) {
         // 서버 응답이 성공한 경우, 해당 배우의 isLiked 값을 업데이트
