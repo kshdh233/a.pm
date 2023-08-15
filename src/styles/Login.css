@@ -1,0 +1,31 @@
+.box-area {
+  /* Default styles for the box */
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+
+  border: none !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Media query for small mobile screens (adjust the width as needed) */
+  @media (max-width: 480px) {
+    margin: 0 20px; /* Add a small margin on the left and right */
+  }
+}
+
+.box-area a {
+  color: #432baf;
+  text-decoration: none;
+}
+
+.logout-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.logout-button {
+  background-color: white; 
+  border: none; 
+  color: gray;
+}

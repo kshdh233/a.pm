@@ -1,0 +1,10 @@
+/* PlayInformationPage.module.css */
+
+.separator {
+    border: none;
+    border-top: 2px solid #141414; /* Adjust the line color and thickness as needed */
+    margin: 20px 0; /* Adjust the margin as needed */
+    padding: 0 5px; /* Adjust the padding to separate the ends */
+    width: 400px;
+  }
+  

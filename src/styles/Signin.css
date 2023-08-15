@@ -1,0 +1,73 @@
+/* Signin.css */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* 배경색 설정 */
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px; /* 아이디와 비밀번호 간격 설정 */
+}
+
+.input-group input, .password-group input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none; /* 모든 테두리 제거 */
+  border-bottom: 1px solid #ccc; /* 아래쪽 테두리 추가 */
+  border-radius: 0; /* 테두리 반경 제거 */
+  font-size: 14px;
+}
+
+.input-group input::placeholder, .password-group input::placeholder {
+  color: #ccc;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.login-form button {
+  background-color: #432baf;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 25px; 
+}
+
+.button-group button:hover {
+  background-color: #5a3fcd;
+}
+
+.login-form a {
+  color: #432baf;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.signup-link {
+  align-self: flex-end;
+  margin-right: 5px;
+  color: gray !important;
+}

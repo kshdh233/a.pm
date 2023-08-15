@@ -1,0 +1,15 @@
+.real-seat{
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ebebeb;
+    height: 25px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10%;
+    margin: 2.5px;
+    width: 25px;
+}

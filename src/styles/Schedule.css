@@ -1,0 +1,25 @@
+.box-area {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 0.01px solid #ccc9c9;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+.box-area a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .box-areaa {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 0.01px solid #ccc9c9;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+  
+.box-areaa a {
+    color: black;
+    text-decoration: none;
+  }

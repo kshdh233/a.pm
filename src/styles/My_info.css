@@ -1,0 +1,36 @@
+.my-info-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.my-info-title {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.user-info {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+
+  border: none !important;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Media query for small mobile screens (adjust the width as needed) */
+  @media (max-width: 480px) {
+    margin: 0 20px; /* Add a small margin on the left and right */
+  }
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 24px;
+  color: #333;
+}

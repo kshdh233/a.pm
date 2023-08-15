@@ -1,0 +1,47 @@
+
+.All_container{
+    margin: 0 auto;
+    padding: 0;
+}
+.Sortation_container{
+    display: flex;
+}
+
+.Sortation_item_container{
+    /* 고정된 너비 설정 */
+    width: 0 auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: calc(var(--vh, 1vh) * 100 - 230px);
+    border-right: 1px solid rgb(223,223,223,0.7);
+    
+
+}
+
+.Sortation_item{
+    width: 100px;
+    display: block;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background-color: rgb(223, 223, 223,0.4);
+
+
+}
+
+.Result_item_container{
+    /* 남은 영역 채우도록 함 */
+    overflow: scroll;
+    height: calc(var(--vh, 1vh) * 100 - 230px);
+    width: 80%;
+}
+
+.Result_item{
+    width: 110%;
+    display: block;
+    height: auto;
+    text-align: center;
+    text-decoration:center;
+    line-height: 60px;
+    white-space: normal;
+}

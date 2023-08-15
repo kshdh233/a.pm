@@ -1,0 +1,58 @@
+/* CSS */
+
+.swiper-container {
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-y: hidden; /* 세로 스크롤 숨김 */
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  max-width: 100%; /* 컨테이너의 최대 너비 설정 */
+  white-space: nowrap; /* 버튼들이 한 줄로 표시되도록 설정 */
+  display: flex; /* 컨테이너 내의 요소들을 가로 방향으로 배치 */
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center; /* 버튼들을 수직으로 가운데 정렬 */
+  flex-wrap: nowrap; /* 버튼들이 한 줄로 표시되도록 설정 */
+  overflow-x: hidden; /* 가로 스크롤 허용 */
+  justify-content: flex-start; /* 버튼들을 왼쪽으로 정렬 */
+  margin-right: 30px;
+}
+
+.swiper-slide-btn {
+  height: 2rem;
+  padding: 0.8rem 1rem; /* 버튼 크기 조정 */
+  line-height: normal; /* 버튼 내 텍스트를 버튼 중앙으로 정렬 */
+  border-radius: 1rem;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #616161;
+  white-space: nowrap;
+  margin: 4px;
+  align-items: center;
+}
+
+.swiper-slide-btn {
+  color: black;
+}
+
+/* 미디어 쿼리를 사용하여 반응형 스타일 적용 */
+@media (max-width: 768px) {
+  .swiper-slide-btn {
+    font-size: 0.9rem; /* 작은 화면에 대한 폰트 크기 조정 */
+    padding: 0.6rem 0.8rem; /* 작은 화면에 대한 버튼 크기 조정 */
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-slide-btn {
+    font-size: 0.8rem; /* 더 작은 화면에 대한 폰트 크기 조정 */
+    padding: 0.5rem 0.7rem; /* 더 작은 화면에 대한 버튼 크기 조정 */
+  }
+}
+
+/* 추가적으로 필요한 스타일은 여기에 추가 */

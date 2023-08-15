@@ -1,0 +1,54 @@
+/* Popular_play.css */
+.performance-container {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin : 0 auto;
+  max-width: 800px;
+
+  border-radius: 4px;
+
+  @media (max-width:640px){
+    justify-content: center;
+  }
+}
+
+.performance-box {
+  width: calc(33.33% - 20px); /* 가로로 3등분하여 배치하기 위해 너비 조정 */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex : 0 0 calc(33.33% - 20px);
+  max-width: 200px;
+  margin: 0 auto;;
+  
+  @media (max-width: 600px){
+    width : 100%;
+    max-width: none;
+  }
+}
+
+.performance-box img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.performance-box h3 {
+  margin-top: 10px;
+}
+
+.performance-box p {
+  margin-top: 5px;
+}
+
+.pagination-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin : 20px 0;
+
+}

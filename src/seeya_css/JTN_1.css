@@ -1,0 +1,36 @@
+.row{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+#JTN-1.A11{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 0 20px;
+}
+/* 구역 */
+
+ #JTN-1.A21{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+ }
+ #JTN-1.A31{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 100px;
+ }
+ #JTN-1.A41{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 0 20px;
+ }
+
+    
+
+                        
