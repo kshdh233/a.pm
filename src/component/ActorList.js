@@ -50,7 +50,7 @@ const ActorList = () => {
       };
   
       // 서버에 좋아요 업데이트 요청 보내기
-      const response = await axios.post(`/actor/ike/${actorId}`, {}, config);
+      const response = await axios.post(`/user/likeActor/${actorId}`, {}, config);
   
       // 서버 응답 확인
       if (response.status === 200) {
@@ -58,7 +58,7 @@ const ActorList = () => {
         setActorList(prevActorList => {
           return prevActorList.map(actor => {
             if (actor.actorId === actorId) {
-              return { ...actor, isLiked: true };
+              return { ...actor, isLiked: !actor.isLiked }; // 상태 반전
             }
             return actor;
           });
@@ -83,13 +83,12 @@ const ActorList = () => {
                 {actor.actorName}
               </Link>
               <div style={likeButtonContainerStyle}>
-                <button
-                  onClick={() => handleLikeClick(actor.actorId)}
-                  disabled={actor.isLiked} // 이미 좋아요한 배우인 경우 버튼 비활성화
-                  style={likeButtonStyle}
-                >
-                  {actor.isLiked ? '❤️' : '🤍'}
-                </button>
+              <button
+                onClick={() => handleLikeClick(actor.actorId)}
+                style={likeButtonStyle}
+              >
+                {actor.isLiked ? '❤️' : '🤍'}
+              </button>
               </div>
             </div>
           </li>
