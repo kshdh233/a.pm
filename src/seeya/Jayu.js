@@ -14,11 +14,23 @@ function Jayu() {
     const [rating, setRating] = useState(0);
     const [comment, setComment] = useState('');
   
+    const getSeatColorClass = (rating) => {
+        if (rating >= 4) {
+          return 'green';
+        } else if (rating >= 3) {
+          return 'yellow';
+        } else if (rating >= 2) {
+          return 'orange';
+        } else {
+          return 'red';
+        }
+      };
+
     useEffect(() => {
         // 서버로부터 좌석 정보를 가져오는 함수
         const fetchSeats = async () => {
           try {
-            const response = await axios.get('https://apm-backend-a20e349efc23.herokuapp.com/seat/list/101'); // theaterId에 실제 극장 ID 사용
+            const response = await axios.get('https://localhost:8080/seat/list/101');
             setSeats(response.data); // 서버에서 받아온 좌석 정보를 상태에 설정
             console.log(response.data);
           } catch (error) {
@@ -44,12 +56,14 @@ function Jayu() {
     const handleSubmitReview = async () => {
     try {
       // 서버로 리뷰 정보 전송
-      await axios.post('https://apm-backend-a20e349efc23.herokuapp.com/view/write/{seatId}', {
+      await axios.post('https://localhost:8080/view/write/{seatId}', {
         seatId: selectedSeatId,
         rating,
         comment,
       });
+
       console.log('Review submitted:', selectedSeatId, 'Rating:', rating, 'Comment:', comment);
+      
       setPopupOpen(false); // 팝업 닫기
     } catch (error) {
       console.error('Error submitting review:', error);
@@ -254,12 +268,19 @@ function Jayu() {
                             <div id="seat"></div>
                             {/* 가상 좌석  끝*/}
                             {/* 좌석표에 열 표시해주는 코드 */}
-                            <div className="seats" onClick={()=>handleSeatClick(17026)}>
-                                {/* 일반 좌석 */}
-                                <div id="seat" className="real green" pk="17026">
-                                    <p>4</p>
+                            {seats.map((seat) => (
+                            <div
+                                className={`seats ${getSeatColorClass(seat.rating)}`}
+                                onClick={() => handleSeatClick(seat.id)}
+                                key={seat.id}
+                            >
+                                {/* 좌석 번호 표시 */}
+                                <div id="seat" className={`real ${getSeatColorClass(seat.rating)}`} pk={seat.id}>
+                                <p>{seat.seatNumber}</p>
                                 </div>
                             </div>
+                            ))}
+
                             {/* 실제 좌석 끝 */}
                             {/* 가상 좌석 */}
                             {/* 가상 좌석  끝*/}

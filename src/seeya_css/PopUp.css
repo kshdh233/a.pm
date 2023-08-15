@@ -1,16 +1,5 @@
 
-/* 좌석 스타일 */
-#seat {
-    /* 좌석의 기본 스타일을 설정 */
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #ccc;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-    margin: 2px;
-  }
+
   
   #seat.selected {
     /* 좋아요가 선택된 좌석의 스타일을 설정 */
