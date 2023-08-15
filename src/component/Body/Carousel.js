@@ -14,7 +14,7 @@ const Carousell = () => {
 
   useEffect(() => {
     // 서버에서 인기 공연 탑텐 목록을 가져오는 API 호출
-    axios.get('/pmshow/topTen')
+    axios.get('https://apm-backend-a20e349efc23.herokuapp.com/pmshow/topTen')
       .then(response => {
         setPopularShows(response.data);
       })

@@ -186,11 +186,14 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+
+
 .seats{
     box-sizing: border-box;
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
     cursor: pointer;
+    
 }
 
 #seat.real.no_review{

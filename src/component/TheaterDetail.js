@@ -10,7 +10,7 @@ const TheaterDetail = ({ theaterId }) => {
 
   const loadTheaterDetails = async () => {
     try {
-      const response = await axios.get(`/theater/${theaterId}`);
+      const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/theater/${theaterId}`);
       setTheater(response.data);
     } catch (error) {
       console.error('Error loading theater details:', error);

@@ -14,16 +14,7 @@ const ActorDetail = () => {
     const fetchActorDetail = async () => {
       try {
         const response = await axios.get(`/actor/${actorId}`);
-        setActor(response.data);
-      } catch (error) {
-        console.error('배우 상세 정보 불러오기 에러:', error);
-      }
-    };
-
-    const fetchActorSchedule = async () => {
-      try {
-        const response = await axios.get(`/schedule/actor/${actorId}`);
-        setSchedule(response.data);
+        setActor(response.data); // 서버에서 가져온 배우 정보를 상태로 설정
       } catch (error) {
         console.error('배우 스케줄 불러오기 에러:', error);
       }

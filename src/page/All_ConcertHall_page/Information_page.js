@@ -1,17 +1,74 @@
-import "../../styles/Logo.css";
-import "../../styles/Center.css";
-import axios from 'axios';
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 function Information() {
+  const {theaterId} = useParams();
+  const [theaterInfo, setTheaterInfo] = useState(null);
 
+  const [performances, setPerformances] = useState([]);
+  const [notice1ImgSrc, setNotice1ImgSrc] = useState(null);
+
+  useEffect(() => {
+    const fetchTheaterInfo = async () => {
+      try {
+        const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/theater/${theaterId}`);
+        const theaterData = response.data;
+        setTheaterInfo(theaterData);
+
+        console.log(theaterData);
+      } catch (error) {
+        console.error("Error fetching theater info: ", error);
+      }
+    };
+
+    const fetchPerformances = async () => {
+      try {
+        const response = await axios.get("https://apm-backend-a20e349efc23.herokuapp.com/pmshow/list");
+        const pmShowData = response.data;
+        setPerformances(pmShowData);
+        
+        console.log(pmShowData);
+      } catch (error) {
+        console.error("Error fetching performance data: ", error);
+      }
+    };
+
+    fetchPerformances();
+  }, []);
+
+  useEffect(() => {
+    const fetchNotice1 = async (pmshowId) => {
+      try {
+        const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/pmshow/${pmshowId}`);
+        const pmshowDetailData = response.data;
+        console.log(pmshowDetailData);
+        if (pmshowDetailData.notice1) {
+          setNotice1ImgSrc(pmshowDetailData.notice1);
+        }
+      } catch (error) {
+        console.error("Error fetching notice1: ", error);
+      }
+    };
+
+    if (performances.length > 0) {
+      const firstPerformance = performances.find(
+        (performance) => performance.theater.theaterId === Number(theaterId)
+      );
+
+      if (firstPerformance) {
+        fetchNotice1(firstPerformance.pmShowId);
+      }
+    }
+  }, [performances, theaterId]);
 
   return (
     <>
       <h1 className="center">공연장 정보</h1>
       <div style={{ flex: 1 }}>
-        <img src='https://ticketimage.interpark.com/Play/ITM/Data/Modify/2023/7/2023072814060304.jpg'
-        style={{ width: '100%', height: 'auto'}} />
+        {notice1ImgSrc && (
+          <img src={notice1ImgSrc} style={{ width: "100%", height: "auto" }} />
+        )}
       </div>
     </>
   );
