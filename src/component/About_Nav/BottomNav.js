@@ -24,7 +24,7 @@ function FixedBottomNavigation() {
     ["공연장", <Place />, "/ConcertHall_page"],
     ["공연", <TheaterComedy />, "/Play_infor_home_page"],
     ["", <Home />, "/Main_page"],
-    ["좋아요", <FavoriteIcon />, "/WishList_page"],
+    ["배우", <FavoriteIcon />, "/ActorList_page"],
     ["마이", <PersonOutline />, "/My_page"],
   ];
   return (
