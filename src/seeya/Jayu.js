@@ -44,7 +44,7 @@ function Jayu() {
     const handleSubmitReview = async () => {
     try {
       // 서버로 리뷰 정보 전송
-      await axios.post('/api/seat/review', {
+      await axios.post('https://apm-backend-a20e349efc23.herokuapp.com/view/write/{seatId}', {
         seatId: selectedSeatId,
         rating,
         comment,

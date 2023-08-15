@@ -13,14 +13,14 @@ function Location() {
       try {
         const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/theater/${theaterId}`);
         const theaterData = response.data;
-        setTheaterInfo(theaterData);
+        setTheaterInfo("theaterData : "+theaterData);
 
         // 주소 정보와 검색 중심 좌표를 변수로 준비
         const address = theaterData.theaterLocation;
        
 
-        console.log(address);
-    
+        console.log("address : "+address);
+        
 
         // Geocoding API를 사용하여 주소를 위도와 경도로 변환
         const geocodingResponse = await axios.get(
@@ -42,6 +42,7 @@ function Location() {
 
         const locationData = geocodingResponse.data;
         console.log(locationData);
+
         if (
           locationData &&
           locationData.addresses &&
