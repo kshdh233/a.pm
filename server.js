@@ -10,10 +10,10 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use(
   '/map-geocode/v2/geocode',
-  // '/http://localhost:8080/'
+
   createProxyMiddleware({
     target: 'https://naveropenapi.apigw.ntruss.com',
-    // target: 'http://localhost:8080/',
+  
     changeOrigin: true,
   })
 );
