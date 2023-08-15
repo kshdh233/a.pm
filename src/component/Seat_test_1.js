@@ -21,7 +21,7 @@ function Seat({ seatId, seatName, averageSeatScore, theaterId }) {
   const handleSubmit = () => {
     // 서버로 데이터 전송 (API 호출)
     // userRating와 userComment를 서버로 전송하고 업데이트된 평균 별점을 받아와서 averageSeatScore를 업데이트
-    axios.post(`/api/seat/${seatId}/rate`, { rating: userRating, comment: userComment })
+    axios.post(`https://apm-backend-a20e349efc23.herokuapp.com/api/seat/${seatId}/rate`, { rating: userRating, comment: userComment })
          .then((response) => {
            const updatedAverageSeatScore = response.data.averageSeatScore;
            setAverageSeatScore(updatedAverageSeatScore);

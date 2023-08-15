@@ -9,7 +9,7 @@ const ActorDetail = () => {
   useEffect(() => {
     const fetchActorDetail = async () => {
       try {
-        const response = await axios.get(`/actor/${actorId}`);
+        const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/actor/${actorId}`);
         setActor(response.data); // 서버에서 가져온 배우 정보를 상태로 설정
       } catch (error) {
         console.error('Error loading actor detail:', error);

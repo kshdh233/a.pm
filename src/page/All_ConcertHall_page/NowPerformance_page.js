@@ -11,7 +11,7 @@ function NowPerformance() {
   useEffect(() => {
     const fetchTheaterInfo = async () => {
       try {
-        const response = await axios.get(`/theater/${theaterId}`);
+        const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/theater/${theaterId}`);
         const theaterData = response.data;
         setTheaterInfo(theaterData);
         console.log(theaterData);
@@ -22,7 +22,7 @@ function NowPerformance() {
 
     const fetchPerformances = async () => {
       try {
-        const response = await axios.get("/pmshow/list");
+        const response = await axios.get("https://apm-backend-a20e349efc23.herokuapp.com/pmshow/list");
         const pmShowData = response.data;
        
         const filtered = pmShowData.filter(

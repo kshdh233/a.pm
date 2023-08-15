@@ -35,7 +35,7 @@ export default function PerformanceList() {
 
   useEffect(() => {
     // 서버에서 데이터 가져오기
-    axios.get("/pmshow/list")
+    axios.get("https://apm-backend-a20e349efc23.herokuapp.com/pmshow/list")
       .then(response => {
         const pmShowData = response.data; // API 응답 데이터
         setPerformances(pmShowData); // 데이터를 state에 저장

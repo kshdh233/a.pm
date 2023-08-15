@@ -9,7 +9,7 @@ const TheaterList = () => {
     const fetchTheaters = async () => {
       try {
         // Axios를 이용하여 서버에서 극장 목록 가져오기
-        const response = await axios.get('/theater/list');
+        const response = await axios.get('https://apm-backend-a20e349efc23.herokuapp.com/theater/list');
 
         // 서버에서 받아온 데이터 중에서 서울 지역인 극장만 필터링하여 React 상태에 저장
         setTheaterList(response.data);

@@ -2,10 +2,10 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
   app.use(
-    '/https://apm-backend-a20e349efc23.herokuapp.com/',
+    'https://naveropenapi.apigw.ntruss.com',
     // '/http://localhost:8080/'
     createProxyMiddleware({
-      target: 'https://apm-backend-a20e349efc23.herokuapp.com/',
+      target: 'https://naveropenapi.apigw.ntruss.com',
       // target: 'http://localhost:8080/',
       changeOrigin: true,
     })

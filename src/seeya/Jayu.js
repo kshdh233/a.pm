@@ -5,6 +5,8 @@ import React, { useState, useEffect, Component } from 'react';
 import { Link } from 'react-router-dom';
 import Like from '../img/LikeLevel.png';
 import axios from 'axios';
+
+
 function Jayu() {
     const [seats, setSeats] = useState([]); // 좌석 정보를 담을 상태
     const [popupOpen, setPopupOpen] = useState(false);
@@ -16,7 +18,7 @@ function Jayu() {
         // 서버로부터 좌석 정보를 가져오는 함수
         const fetchSeats = async () => {
           try {
-            const response = await axios.get('/seat/list/101'); // theaterId에 실제 극장 ID 사용
+            const response = await axios.get('https://apm-backend-a20e349efc23.herokuapp.com/seat/list/101'); // theaterId에 실제 극장 ID 사용
             setSeats(response.data); // 서버에서 받아온 좌석 정보를 상태에 설정
             console.log(response.data);
           } catch (error) {
@@ -62,13 +64,15 @@ function Jayu() {
             <div className="rating-info">
                 <img src={Like} alt="nope" />
             </div>
+
             <Container>
             {/* 층 */}
+            <div style={{overflow:"scroll"}}>
              <div className="seat_all seat-all" 
                 style={{paddingTop:"120px"}}
                 data-elem="pinchzoomer">
 
-                <div style={{overflow:"scroll"}}>
+            
              
                 <div id="1층">
                 

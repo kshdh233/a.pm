@@ -11,7 +11,7 @@ function Location() {
   useEffect(() => {
     const fetchTheaterLocation = async () => {
       try {
-        const response = await axios.get(`/theater/${theaterId}`);
+        const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/theater/${theaterId}`);
         const theaterData = response.data;
         setTheaterInfo(theaterData);
 
@@ -24,7 +24,7 @@ function Location() {
 
         // Geocoding API를 사용하여 주소를 위도와 경도로 변환
         const geocodingResponse = await axios.get(
-          "https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode",
+          "/map-geocode/v2/geocode",
           
           {
             params: {

@@ -11,7 +11,7 @@ const ConcertHall_SearchBar = (props) => {
   useEffect(() => {
     const fetchDataFromServer = async () => {
       try {
-        const response = await axios.get("/theater/list/seoul");
+        const response = await axios.get("https://apm-backend-a20e349efc23.herokuapp.com/theater/list/seoul");
         const theaterData = response.data;
         setTheaterList(theaterData);
       } catch (error) {

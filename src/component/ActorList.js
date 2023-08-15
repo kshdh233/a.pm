@@ -17,7 +17,7 @@ const ActorList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/actor/list/pm');
+        const response = await axios.get('https://apm-backend-a20e349efc23.herokuapp.com/actor/list/pm');
         setActorList(response.data);
         setTotalPages(Math.ceil(response.data.length / itemsPerPage));
         setLoading(false);
@@ -50,7 +50,7 @@ const ActorList = () => {
       };
   
       // 서버에 좋아요 업데이트 요청 보내기
-      const response = await axios.post(`/user/likeActor/${actorId}`, {}, config);
+      const response = await axios.post(`https://apm-backend-a20e349efc23.herokuapp.com/user/likeActor/${actorId}`, {}, config);
   
       // 서버 응답 확인
       if (response.status === 200) {

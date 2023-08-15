@@ -12,7 +12,7 @@ const Actor = () => {
 
   const loadActorList = async () => {
     try {
-      const response = await axios.get('/actor/list/pm');
+      const response = await axios.get('https://apm-backend-a20e349efc23.herokuapp.com/actor/list/pm');
       setActorList(response.data.content);
     } catch (error) {
       console.error('Error loading actor list:', error);

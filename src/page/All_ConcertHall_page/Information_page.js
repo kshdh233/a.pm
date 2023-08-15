@@ -12,7 +12,7 @@ function Information() {
   useEffect(() => {
     const fetchTheaterInfo = async () => {
       try {
-        const response = await axios.get(`/theater/${theaterId}`);
+        const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/theater/${theaterId}`);
         const theaterData = response.data;
         setTheaterInfo(theaterData);
 
@@ -24,7 +24,7 @@ function Information() {
 
     const fetchPerformances = async () => {
       try {
-        const response = await axios.get("/pmshow/list");
+        const response = await axios.get("https://apm-backend-a20e349efc23.herokuapp.com/pmshow/list");
         const pmShowData = response.data;
         setPerformances(pmShowData);
         
@@ -40,7 +40,7 @@ function Information() {
   useEffect(() => {
     const fetchNotice1 = async (pmshowId) => {
       try {
-        const response = await axios.get(`/pmshow/${pmshowId}`);
+        const response = await axios.get(`https://apm-backend-a20e349efc23.herokuapp.com/pmshow/${pmshowId}`);
         const pmshowDetailData = response.data;
         console.log(pmshowDetailData);
         if (pmshowDetailData.notice1) {

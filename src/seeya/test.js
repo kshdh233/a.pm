@@ -13,7 +13,7 @@ function Test() {
   useEffect(() => {
     const fetchSeats = async () => {
       try {
-        const response = await axios.get('/seat/list/101'); // theaterId에 실제 극장 ID 사용
+        const response = await axios.get('https://apm-backend-a20e349efc23.herokuapp.com/seat/list/101'); // theaterId에 실제 극장 ID 사용
         setSeats(response.data);
         console.log(response.data);
       } catch (error) {
