@@ -9,7 +9,7 @@ function PmShowDetail() {
   const { pmShowId } = useParams();
 
   useEffect(() => {
-    fetch(`/pmshow/${pmShowId}`)
+    fetch(`https://apm-backend-a20e349efc23.herokuapp.com/pmshow/${pmShowId}`)
       .then(response => response.json())
       .then(data => {
         setPmShow(data);

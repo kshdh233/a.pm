@@ -9,7 +9,7 @@ function PmShowList() {
   const itemsPerPage = itemsPerRow * rowsPerPage;
 
   useEffect(() => {
-    fetch('/pmshow/list')
+    fetch('https://apm-backend-a20e349efc23.herokuapp.com/pmshow/list')
       .then(response => response.json())
       .then(data => {
         setPmShowList(data);
