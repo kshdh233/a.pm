@@ -24,6 +24,10 @@ function PmShowDetail() {
     setCurrentSection(section);
   };
 
+  const handleBookingLinkClick = () => {
+    window.location.href = pmShow.bookingLink;
+  };
+
   // 각 섹션에 맞는 이미지들 배열로 관리
   const sectionImages = {
     playinfo: [pmShow.playinfo1, pmShow.playinfo2],
@@ -43,6 +47,8 @@ function PmShowDetail() {
         <p><strong>장르:</strong> {pmShow.genre}</p>
         <p><strong>캐스팅:</strong> {pmShow.castingInformation}</p>
         <p><strong>시놉시스:</strong> {pmShow.synopsis}</p>
+        <button className="book-button" onClick={handleBookingLinkClick}>예매하기</button>
+        <p>-------------------------------------------------------------------------</p>
         <div style={playinfoStyle}>
           <button className="swiper-slide-btn" onClick={() => handleSectionChange('playinfo')}>공연 정보</button>
           <button className="swiper-slide-btn" onClick={() => handleSectionChange('actorschedule')}>배우 스케줄</button>

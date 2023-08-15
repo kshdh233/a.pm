@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function PmShowList() {
   const [pmShowList, setPmShowList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState('');
   const itemsPerRow = 2;
   const rowsPerPage = 3;
   const itemsPerPage = itemsPerRow * rowsPerPage;
@@ -19,32 +20,53 @@ function PmShowList() {
   const getCurrentItems = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    return pmShowList.slice(startIndex, endIndex);
+
+    // Apply search filter
+    const filteredList = pmShowList.filter(pmShow =>
+      pmShow.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    return filteredList.slice(startIndex, endIndex);
   };
 
   const totalPages = Math.ceil(pmShowList.length / itemsPerPage);
 
-  const handlePageChange = (newPage) => {
+  const handlePageChange = newPage => {
     setCurrentPage(newPage);
+  };
+
+  const handleSearchChange = event => {
+    setSearchTerm(event.target.value);
+    setCurrentPage(1); // Reset page when search term changes
   };
 
   return (
     <div style={containerStyle}>
       <h1 style={headingStyle}>전체 공연 목록</h1>
-      <div style={spacerStyle}></div> {}
+      <div style={spacerStyle}></div>
+      
       <div style={listContainerStyle}>
         {getCurrentItems().map(pmShow => (
           <div key={pmShow.pmShowId} style={itemStyle}>
             <Link to={`/pmShow/${pmShow.pmShowId}`}>
               <img src={pmShow.poster} alt={`${pmShow.title} 포스터`} style={posterStyle} />
             </Link>
-            <div style={showTitleStyle} title={pmShow.title}>{pmShow.title}</div>
+            <div style={showTitleStyle} title={pmShow.title}>
+              {pmShow.title}
+            </div>
           </div>
         ))}
       </div>
-      <div style={spacerStyle}></div> {}
+      <div style={searchContainerStyle}>
+        <input
+          type="text"
+          placeholder="공연을 검색해보세요"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          style={searchInputStyle}
+        />
+      </div>
       <div style={paginationContainerStyle}>
-        {/* 페이지네이션 컴포넌트 */}
         {Array.from({ length: totalPages }).map((_, index) => (
           <button
             key={index}
@@ -59,6 +81,20 @@ function PmShowList() {
     </div>
   );
 }
+
+const searchContainerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  marginTop: '20px',
+};
+
+const searchInputStyle = {
+  padding: '10px',
+  width: '100%',
+  borderRadius: '5px',
+  border: '1px solid #ccc',
+  fontSize: '16px',
+};
 
 const containerStyle = {
   width: '80%',
