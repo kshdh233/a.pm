@@ -9,7 +9,7 @@ const WishList = ({ token }) => {
   useEffect(() => {
     const fetchLikedActors = async () => {
       try {
-        const response = await axios.get('https://apm-backend-a20e349efc23.herokuapp.com/user/liked/actors', {
+        const response = await axios.get(' https://apm-backend-a20e349efc23.herokuapp.com/user/liked/actors', {
           headers: {
            'Authorization': `Bearer ${tokenFromLocalStorage}`,
           },
@@ -32,9 +32,9 @@ const WishList = ({ token }) => {
             <span>{actor.actorName}</span>
             <span>
               {actor.isLiked ? (
-                <AiFillHeart style={{ color: 'red', marginLeft: '10px' }} />
+                <AiFillHeart style={{ color: 'gray', marginLeft: '10px' }} />
               ) : (
-                <AiOutlineHeart style={{ color: 'gray', marginLeft: '10px' }} />
+                <AiOutlineHeart style={{ color: 'red', marginLeft: '10px' }} />
               )}
             </span>
           </li>
