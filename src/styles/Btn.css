@@ -33,6 +33,7 @@
   color: #616161;
   white-space: nowrap;
   margin: 4px;
+  align-items: center;
 }
 
 .swiper-slide-btn {

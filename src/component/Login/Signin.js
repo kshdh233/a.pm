@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/Signin.css';
 import My_info_page from '../../page/My_page/My_info_page';
+import { Token } from '@mui/icons-material';
 
 function Signin(props) {
   const [username, setUsername] = useState("");
@@ -41,10 +42,15 @@ function Signin(props) {
       console.log(response)
       // 서버의 응답 상태 코드 확인
       if (response.status === 200) {
+        const data = await response.json();
+        const token = data.token; // 실제로 받은 토큰 값 추출
+
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('username', username);
+        localStorage.setItem('token', token);
         setIsLoggedIn(true);
         navigate('/Main_page');
+        console.log(token);
       } else if (response.status === 401) {
         // 로그인 실패 시 서버 응답을 JSON 형태로 파싱하여 오류 메시지 가져오기
         const data = await response.json();

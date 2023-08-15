@@ -6,7 +6,7 @@ import '../../styles/Signin.css';
 function My_page(){
     return(
         <div>
-            <h2 className="my-info-title">MY a p,m</h2>
+            <h2 className="my-info-title">My Page</h2>
             <Signin />        
         </div>
     )

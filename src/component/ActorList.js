@@ -6,17 +6,18 @@ const ActorList = () => {
   const [actorList, setActorList] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [likedActors, setLikedActors] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
   const itemsPerPage = 10;
   const paginationSize = 10;
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+  const tokenFromLocalStorage = localStorage.getItem('token');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/actor/list/pm'); 
+        const response = await axios.get('/actor/list/pm');
         setActorList(response.data);
         setTotalPages(Math.ceil(response.data.length / itemsPerPage));
         setLoading(false);
@@ -35,22 +36,66 @@ const ActorList = () => {
 
   const handleLikeClick = async (actorId) => {
     try {
-      await axios.post(`/actor/${actorId}/like`);
-      setLikedActors((prevLikedActors) => [...prevLikedActors, actorId]);
+      if (!tokenFromLocalStorage) {
+        // 토큰이 없는 경우 로그인 페이지로 이동하거나, 알림 메시지를 표시할 수 있습니다.
+        alert('로그인이 필요합니다.');
+        return;
+      }
   
-      // 좋아요를 누른 후에 해당 배우의 좋아요 상태를 서버에서 다시 가져와서 업데이트
-      const response = await axios.get(`/actor/${actorId}`);
-      const updatedActor = response.data;
-      const updatedActorList = actorList.map((actor) => {
-        if (actor.actorId === updatedActor.actorId) {
-          return updatedActor;
+      const config = {
+        headers: {
+          'Authorization': `Bearer ${tokenFromLocalStorage}`,
+          'Content-Type': 'application/json'
         }
-        return actor;
-      });
-      setActorList(updatedActorList);
+      };
+  
+      // 서버에 좋아요 업데이트 요청 보내기
+      const response = await axios.post(`/actor/ike/${actorId}`, {}, config);
+  
+      // 서버 응답 확인
+      if (response.status === 200) {
+        // 서버 응답이 성공한 경우, 해당 배우의 isLiked 값을 업데이트
+        setActorList(prevActorList => {
+          return prevActorList.map(actor => {
+            if (actor.actorId === actorId) {
+              return { ...actor, isLiked: true };
+            }
+            return actor;
+          });
+        });
+      } else {
+        // ...
+        // 실패 처리에 대한 추가 로직 작성
+      }
     } catch (error) {
       console.error('Error liking actor:', error);
     }
+  };
+  
+
+  const renderActors = (displayedActors) => {
+    return (
+      <ul style={listStyle}>
+        {displayedActors.map((actor) => (
+          <li key={actor.actorId} style={itemStyle}>
+            <div style={actorInfoContainerStyle}>
+              <Link to={`/actor/${actor.actorId}`} style={actorLinkStyle}>
+                {actor.actorName}
+              </Link>
+              <div style={likeButtonContainerStyle}>
+                <button
+                  onClick={() => handleLikeClick(actor.actorId)}
+                  disabled={actor.isLiked} // 이미 좋아요한 배우인 경우 버튼 비활성화
+                  style={likeButtonStyle}
+                >
+                  {actor.isLiked ? '❤️' : '🤍'}
+                </button>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    );
   };
 
   const updateSearchResults = () => {
@@ -96,26 +141,7 @@ const ActorList = () => {
     <div style={containerStyle}>
       <h1 style={headingStyle}>전체 배우 목록</h1>
 
-      <ul style={listStyle}>
-        {displayedActors.map((actor) => (
-          <li key={actor.actorId} style={itemStyle}>
-            <div style={actorInfoContainerStyle}>
-              <Link to={`/actor/${actor.actorId}`} style={actorLinkStyle}>
-                {actor.actorName}
-              </Link>
-              <div style={likeButtonContainerStyle}>
-                <button
-                  onClick={() => handleLikeClick(actor.actorId)}
-                  disabled={likedActors.includes(actor.actorId)}
-                  style={likeButtonStyle}
-                >
-                  {likedActors.includes(actor.actorId) ? '❤️' : '🤍'}
-                </button>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
+      {renderActors(displayedActors)}
 
       <div style={searchContainerStyle}>
         <input
