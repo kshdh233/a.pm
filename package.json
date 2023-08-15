@@ -34,7 +34,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "https://apm-backend-a20e349efc23.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",

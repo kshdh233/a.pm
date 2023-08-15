@@ -60,6 +60,7 @@ import Actor_page from "./page/Actor_page";
 
 // component 폴더
 import Popular_playList from "./component/About_Performance/Popular_play";
+
 import FixedBottomNavigation from "./component/About_Nav/BottomNav";
 import Cjazit from "./seeya/Cjazit";
 import JTN_1 from "./seeya/JTN_1";
@@ -84,7 +85,7 @@ import Test from "./seeya/test";
 //component - test
 import SeatMap from "./component/Seat_test"; 
 import ConcertHall_SearchBar from "./component/About_Search/ConcertHall_SearchBar";
-
+import Top_PerformanceList from "./component/About_Performance/TopPopular_play";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

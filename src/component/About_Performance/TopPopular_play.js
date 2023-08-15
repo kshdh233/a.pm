@@ -26,7 +26,7 @@ const theme = createTheme({
   },
 });
 
-export default function PerformanceList() {
+export default function Top_PerformanceList() {
 
   const [performances, setPerformances] = useState([]); // 공연 그림 db 배열로 저장
   const [currentPage, setCurrentPage] = useState(1); // 현재 page =1
@@ -35,7 +35,7 @@ export default function PerformanceList() {
 
   useEffect(() => {
     // 서버에서 데이터 가져오기
-    axios.get("/pmshow/list")
+    axios.get("/pmshow/topTen")
       .then(response => {
         const pmShowData = response.data; // API 응답 데이터
         setPerformances(pmShowData); // 데이터를 state에 저장
@@ -73,7 +73,7 @@ export default function PerformanceList() {
           </div>
         ))}
       </div>
-      <div className="Pagination_container">
+      <div>
         <ThemeProvider theme={theme}>
         <Pagination
           count={totalPages}

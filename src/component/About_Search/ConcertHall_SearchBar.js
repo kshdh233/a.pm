@@ -24,7 +24,16 @@ const ConcertHall_SearchBar = (props) => {
 
   const handleInputChange = (event, newValue) => {
     setSearchValue(newValue);
-  };
+    // 이동하기
+  if (newValue) {
+    const selectedTheater = theaterList.find((theater) => theater.theaterName === newValue);
+    if (selectedTheater) {
+      const encodedTheaterId = encodeURIComponent(selectedTheater.theaterId);
+      window.location.href = `/theater/${encodedTheaterId}`;
+    }
+  }
+};
+ 
 
   return (
     <div>
@@ -40,18 +49,7 @@ const ConcertHall_SearchBar = (props) => {
           )}
         />
       </div>
-      <div>
-        {searchValue && (
-          <Link
-            to={`/theater/${encodeURIComponent(
-              theaterList.find((theater) => theater.theaterName === searchValue)
-                ?.theaterId
-            )}`}
-          >
-            이 극장에 대한 페이지로 이동
-          </Link>
-        )}
-      </div>
+      
     </div>
   );
 };
