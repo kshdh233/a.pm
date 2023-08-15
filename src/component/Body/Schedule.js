@@ -5,10 +5,10 @@ function Schedule(){
   return(
     <>
       <div className='box-area'>
-        <Link to="/Schedule_page">일정 관리 {'>'}</Link>
+        <Link to='/WishList_page'>관심 배우 {'>'}</Link>
       </div>
       <div className='box-area'>
-        <Link to='/ActorList_page'>배우 목록 {'>'}</Link>
+        <Link to="/Schedule_page">일정 관리 {'>'}</Link>
       </div>
   </>
   )
